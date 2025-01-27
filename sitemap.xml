@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <!-- <loc>: The location of your homepage. -->
+        <loc>https://www.freedomfromfiat.com/index.html</loc>
+        <!-- <lastmod>: Last modification date. Set to today's date. -->
+        <lastmod>2025-01-26</lastmod>
+        <!-- <changefreq>: Specifies that the homepage is expected to change daily (great for frequent updates). -->
+        <changefreq>daily</changefreq>
+        <!-- <priority>: Gives high importance to your homepage. -->
+        <priority>1.0</priority>
+    </url>
+</urlset>
