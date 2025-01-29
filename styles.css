@@ -98,16 +98,40 @@ h2 {
 .disclaimer {
     background-color: #2c3e50;
     color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 4rem;
+    padding: 3rem 1rem;
+    margin: 4rem auto 0;
+    width: 100%;
+}
+
+.disclaimer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 1rem;
 }
 
 .disclaimer p {
-    max-width: 800px;
-    margin: 0 auto 1rem;
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.copyright {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .disclaimer {
+        padding: 2rem 1rem;
+    }
+    
+    .disclaimer-content {
+        padding: 0;
+    }
 }
 
 .copyright {
