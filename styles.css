@@ -76,13 +76,14 @@ body {
 
 .hero h1 {
     font-family: 'Barlow', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 2.8rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
     color: #ccc;
 }
 
@@ -182,7 +183,7 @@ h2 {
 }
 
 .disclaimer p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: rgba(255, 255, 255, 0.9);
@@ -220,9 +221,13 @@ h2 {
     .hero h1 {
         font-size: 2rem;
     }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
     
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     
     .content-block {
@@ -230,7 +235,7 @@ h2 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .hero h1 {
         font-size: 1.75rem;
     }
@@ -240,6 +245,6 @@ h2 {
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
