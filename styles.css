@@ -61,15 +61,38 @@ h2 {
     text-align: center;
 }
 
-.feature-list {
-    padding-left: 2rem;
+/* Base class for shared traits */
+.base-list {
     margin: 1.5rem 0;
 }
 
-.feature-list li {
+.base-list li {
     margin-bottom: 1rem;
     line-height: 1.6;
     color: #444;
+}
+
+/* Extend .base-list for .feature-list */
+.feature-list {
+    padding-left: 2rem;
+    list-style-type: disc; /* Add bullet points */
+}
+
+/* Extend .base-list for .step-list */
+.step-list {
+    padding-left: 0.75rem;
+    counter-reset: step-counter;
+    list-style-type: none; /* Remove default list styling */
+}
+
+.step-list li {
+    counter-increment: step-counter;
+}
+
+.step-list li::before {
+    content: "Step " counter(step-counter) " - ";
+    font-weight: bold;
+    color: #444; /* Match the text color */
 }
 
 /* CTA Section */
