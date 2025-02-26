@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Freedom Debit Card</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carousel.css"/>
 </head>
 <body>
     <header class="hero">
@@ -17,78 +20,106 @@
     <main class="content">
         <section class="content-block">
             <h2>
-                <p>
-                    The debit card for spending your crypto
-                    <br>No fiat or stablecoin required!
-                </p>
-            </h2>          
-            <div class="description">
-                <p>If you&apos;re ready to move your financial life to crypto, we offer the Crypto Freedom Debit Card.</p>
-                <p>The Crypto Freedom Debit Card is for people who self-custody their wealth in crypto currency and who want a way to quickly, easily, efficiently, and economically spend their crypto in the real world.</p>
-                <p>The Crypto Freedom Debit Card is for people who don't want to keep a penny of their wealth in fiat currency.</p>
+                The debit card for spending your crypto
+                <br>No fiat or stablecoin required!
+            </h2>   
+            <div id="homepageCarousel" class="carousel slide mb-6" data-bs-ride="true">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="img/cardtoinspire.png" class="d-block w-100" alt="Slide 1"/>
+                    <div class="container">
+                    <div class="carousel-caption text-start">
+                        <p>If you're ready to move your financial life to crypto, we offer the Crypto Freedom Debit Card.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/fiatmerchant.png" class="d-block w-100" alt="Slide 2"/>
+                    <div class="container">
+                    <div class="carousel-caption text-low">
+                        <p><br><br>The Crypto Freedom Debit Card is for people who self-custody their wealth in crypto currency and who want a way to easily spend their crypto in the real world.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/takecustody.png" class="d-block w-100" alt="Slide 3"/>
+                    <div class="container">
+                    <div class="carousel-caption text-low">
+                        <div class="text-white">
+                        <p>The Crypto Freedom Debit Card is for people who don't want to keep a penny of their wealth in fiat currency.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/cardtoinspire.png" class="d-block w-100" alt="Slide 4"/>
+                    <div class="container">
+                    <div class="carousel-caption">
+                        <p><a class="btn btn-lg btn-primary" href="/waitlist.html">Join the Waiting List</a></p>
+                        <p>The Crypto Freedom Debit card is your bridge from crypto to the world!</p>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
 
-        <!-- <section class="content-block">
-            <h2>How It Works</h2>
-            <ol class="feature-list">
-                <li>Self-custody your wealth in your own wallet</li>
-                <li>Transfer spending crypto to your 3F Financial Spending Wallet*</li>
-                <li>Make purchases using your Crypto Freedom Debit Ca</li>
-                <li>Your crypto is sold on our Special Purpose Exchange at the current market price</li>
-                <li>We specifically identify the crypto that you sold according to your tax allocation preference</li>
-                <li>We perform real-time fiat settlement with the merchant</li>
-
-            </ol>
-        </section> -->
-
         <section class="content-block">
             <h2>How It Works</h2>
-            <ol class="feature-list">
+            <ol class="base-list step-list">
                 <li>Self-custody your wealth in your own wallet</li>
                 <li>Transfer the crypto that you want to spend to your 3F Financial Spending Wallet*</li>
                 <li>Make a purchase using your Crypto Freedom Debit Card</li>
                 <li>Your crypto is sold on our Special Purpose Exchange at the current market price</li>
                 <li>Money is transmitted to the merchant to pay for your purchase</li>
                 <li>We specifically identify the crypto that you sold according to your tax allocation preference</li>
-
             </ol>
         </section>
 
-        <!-- <section class="content-block">
-            <h2>Security & Self Custody</h2>
-            <ul class="feature-list">
-                <li>Maintain full control of your assets in your custody</li>
-                <li>Transfer only what you want to spend</li>
-                <li>Optimize transfer timing for best rates</li>
-                <li>Withdraw back to your wallet anytime</li>
-            </ul>
-        </section> -->
-
         <section class="content-block">
             <h2>Security & Self Custody</h2>
-            <ul class="feature-list">
+            <ul class="base-list feature-list">
                 <li>Custody your own crypto</li>
-                <li>Only transfer what you want to spend</li>
-                <li>Transfer on your schedule when transfer prices are cheapest</li>
-                <li>Transfer back to your self-custody wallet without restriction</li>
+                <li>Transfer only what you want to spend</li>
+                <li>Choose when to transfer for best rates</li>
+                <li>Withdraw back to your self-custody wallet anytime</li>
             </ul>
         </section>
 
-        <!-- <section class="content-block">
-            <h2>Smarter Taxes</h2>
-            <ul class="feature-list">
-                <li>Real-Time Tax Engine integration according to your instructions</li>
-                <li>Choose tax optimization strategies, such as Max-Loss or Net-Zero</li>
-                <li>We provide you with automatic IRS form generation</li>
-                <li>Detailed capital gains tracking</li>
+        <section class="content-block">
+            <h2>Eligibility & Compliance</h2>
+            <ul class="base-list feature-list">
+                <li>Our services will initially be offered in the US. We plan on expanding to other reasons across the world
+                </li>
+                <li>As required by law, all clients are vetted according to current KYC, AML, OFAC regulations</li>
+                <li>We partner with legacy financial institutions and abide by common regulations and restricted categories</li>
             </ul>
-        </section> -->
+        </section>
 
         <section class="content-block">
             <h2>Smarter Taxes</h2>
-            <ul class="feature-list">
+            <ul class="base-list feature-list">
                 <li>Using crypto for daily purchases is a taxable event</li>
+                <li>Without careful planning, your end-of-year tax reporting can become a nightmare</li>
                 <li>The Crypto Freedom Debit Card solves this problem with our Real Time Tax Engine</li>
                 <li>Select one of our Tax Allocation Strategies, such as Max-Loss or Net-Zero</li>
                 <li>Every purchase is recorded according to your preference from your available purchase lots</li>
@@ -96,43 +127,46 @@
             </ul>
         </section>
 
-        <!-- <section class="content-block">
+        <section class="content-block">
             <h2>Help Realize the True Potential of Crypto Currency</h2>
-            <ul class="feature-list">
+            <ul class="base-list feature-list">
+                <li>The characteristics of money are i) a store of value, ii) a medium of exchange, and iii) a unit of account</li>
+                <li>Trillions of dollars worth of market cap prove that crypto is already a store of value</li>
+                <li>The Freedom Crypto Debit Card makes crypto a medium of exchange, bridging seamlessly to existing fiat merchant payment networks</li>
+                <li>Once crypto becomes a medium of exchange, many believe it will reach its ultimate valuation, and will also be much less volatile</li>
+                <li>With the Crypto Freedom Debit Card, you keep all of your wealth in crypto to benefit from its potential upside and avoid the certain downside of fiat inflation</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Crypto Freedom Debit Card</h2>
+            <ul class="base-list feature-list">
+                <li>We offer the Crypto Freedom Debit Card as a way for crypto to reach its true potential and for crypto to achieve its ultimate valuation</li>
                 <li>Crypto currency can be volatile and goes up and down</li>
                 <li>Fiat currency is inflationary and only goes down</li>
                 <li>With the Crypto Freedom Debit Card, you can keep all of your wealth in crypto to benefit from the potential upside and avoid the certain downside</li>
             </ul>
-        </section> -->
-
-        <section class="content-block">
-            <h2>Help Realize the True Potential of Crypto Currency</h2>
-            <ul class="feature-list">
-                <li>The characteristics of money are i) a store of value, ii) a medium of exchange, and iii) a unit of account</li>
-                <li>Trillions of dollars worth of market cap proves that crypto is already a store of value</li>
-                <li>The Freedom Crypto Debit Card makes crypto a medium of exchange, bridged seamlessly to existing fiat merchant payment networks</li>
-                <li>Once crypto becomes a medium of exchange, many believe it will reach its ultimate valuation, and will also be much less volatile.</li>
-            </ul>
         </section>
 
         <section class="cta-section">
-            <h2>Crypto Freedom Debit Card</h2>
             <div class="cta-content">
-                <p>
-                    We offer the Crypto Freedom Debit Card as a way for crypto to reach its true potential and for crypto to achieve its ultimate valuation
-                    <br>Crypto currency can be volatile and goes up and down
-                    <br>Fiat currency is inflationary and only goes down
-                    <br>With the Crypto Freedom Debit Card, you can keep all of your wealth in crypto to benefit from the potential upside and avoid the certain downside
-                </p>                
-                <a href="#join" class="cta-button">Join the Waiting List</a>
+                <h2>We offer the Crypto Freedom Debit Card as a way for crypto to reach its true potential and for crypto to achieve its ultimate valuation</h2>
+                <a href="/waitlist.html" class="cta-button">Join the Waiting List</a>
             </div>
         </section>
     </main>
 
     <footer class="disclaimer">
-        <p>This website is for informational purposes only. The services described are not yet available and will be launched at a future date.</p>
-        <p>Nothing on this site constitutes financial, legal, or investment advice. Please consult a qualified professional for personalized advice.</p>
-        <p class="copyright">Copyright 3F Payments Inc. All rights reserved.</p>
+        <div class="disclaimer-content">
+            <p>
+                This website is for informational purposes only. The services described are not yet available and will be launched at a future date.
+                Nothing on this site constitutes financial, legal, or investment advice. Please consult a qualified professional for personalized advice.
+            </p>
+            <p class="copyright">Copyright 3F Payments Inc. All rights reserved.</p>
+        </div>
     </footer>
+
+<!-- LOCAL Bootstrap JS (includes Popper) -->
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
