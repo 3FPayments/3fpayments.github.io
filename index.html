@@ -22,64 +22,64 @@
             <h2>
                 The debit card for spending your crypto
                 <br>No fiat or stablecoin required!
-            </h2>   
-            <div id="homepageCarousel" class="carousel slide mb-6" data-bs-ride="true">
+            </h2>
+        <div class="carousel-wrapper">
+            <!-- Carousel -->
+            <div id="homepageCarousel" class="carousel slide" data-bs-ride="true">
+                <!-- Carousel indicators -->
                 <div class="carousel-indicators">
-                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
+                <!-- Carousel items -->
                 <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <img src="img/cardtoinspire.png" class="d-block w-100" alt="Slide 1"/>
-                    <div class="container">
-                    <div class="carousel-caption text-start">
-                        <p>If you're ready to move your financial life to crypto, we offer the Crypto Freedom Debit Card.</p>
+                    <div class="carousel-item active">
+                        <img src="img/cardtoinspire.png" alt="Slide 1" />
                     </div>
+                    <div class="carousel-item">
+                        <img src="img/fiatmerchant.png" alt="Slide 2">
                     </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="img/fiatmerchant.png" class="d-block w-100" alt="Slide 2"/>
-                    <div class="container">
-                    <div class="carousel-caption text-low">
-                        <p><br><br>The Crypto Freedom Debit Card is for people who self-custody their wealth in crypto currency and who want a way to easily spend their crypto in the real world.</p>
+                    <div class="carousel-item">
+                        <img src="img/takecustody.png" alt="Slide 3">
                     </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="img/takecustody.png" class="d-block w-100" alt="Slide 3"/>
-                    <div class="container">
-                    <div class="carousel-caption text-low">
-                        <div class="text-white">
-                        <p>The Crypto Freedom Debit Card is for people who don't want to keep a penny of their wealth in fiat currency.</p>
+                    <div class="carousel-item">
+                        <img src="img/cardtoinspire.png" alt="Slide 4">
                         </div>
-                    </div>
-                    </div>
                 </div>
-
-                <div class="carousel-item">
-                    <img src="img/cardtoinspire.png" class="d-block w-100" alt="Slide 4"/>
-                    <div class="container">
-                    <div class="carousel-caption">
-                        <p><a class="btn btn-lg btn-primary" href="/waitlist.html">Join the Waiting List</a></p>
-                        <p>The Crypto Freedom Debit card is your bridge from crypto to the world!</p>
-                    </div>
-                    </div>
-                </div>
-
-                </div>
+                <!-- Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
+                </div>
+                
+                <!-- Fixed-height caption container -->
+                <div class="caption-container">
+                    <div class="carousel-caption-container">
+                        <!-- Captions for each slide -->
+                        <div class="carousel-caption-below" data-bs-target="#homepageCarousel" data-bs-slide-to="0">
+                            If you're ready to move your financial life to crypto, we offer the Crypto Freedom Debit Card.
+                        </div>
+                        <div class="carousel-caption-below" data-bs-target="#homepageCarousel" data-bs-slide-to="1">
+                            The Crypto Freedom Debit Card is for people who self-custody their wealth in crypto currency and who want a
+                            way to easily spend their crypto in the real world.
+                        </div>
+                        <div class="carousel-caption-below" data-bs-target="#homepageCarousel" data-bs-slide-to="2">
+                            The Crypto Freedom Debit Card is for people who don't want to keep a penny of their wealth in fiat currency.
+                        </div>
+                        <div class="carousel-caption-below" data-bs-target="#homepageCarousel" data-bs-slide-to="3">
+                            The Crypto Freedom Debit card is your bridge from crypto to the world!
+                            <br><br><a class="btn btn-lg btn-primary" href="/waitlist.html">Join the Waiting List</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -168,5 +168,7 @@
 
 <!-- LOCAL Bootstrap JS (includes Popper) -->
 <script src="js/bootstrap.bundle.min.js"></script>
+<!-- Custom carousel height script -->
+<script src="js/carousel_layout.js"></script>
 </body>
 </html>
