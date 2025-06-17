@@ -134,13 +134,103 @@
             </div>
 
             <div class="fs-field">
-              <label class="fs-label">What would stop you from using your Cryptocurrency for purchases?</label>
-              <input
-                class="fs-input"
-                type="text"
-                id="why-not-purchase-with-crypto"
-                name="why-not-purchase-with-crypto"
-              />
+              <label class="fs-label">
+                <br />What would stop you from using your Cryptocurrency for purchases? (check all that apply)</label
+              >
+
+              <div class="fs-checkbox-group">
+                <div class="fs-checkbox-field">
+                  <div class="fs-checkbox-wrapper">
+                    <input
+                      class="fs-checkbox"
+                      id="hold-as-investment"
+                      name="why-not-purchase-with-crypto"
+                      type="checkbox"
+                      value="hold-as-investment"
+                    />
+                  </div>
+                  <div>
+                    <label class="fs-label" for="hold-as-investment"
+                      >I want to hold my cryptocurrency for investment purposes</label
+                    >
+                  </div>
+                </div>
+
+                <div class="fs-checkbox-field">
+                  <div class="fs-checkbox-wrapper">
+                    <input
+                      class="fs-checkbox"
+                      id="merchants-do-not-accept"
+                      name="why-not-purchase-with-crypto"
+                      type="checkbox"
+                      value="merchants-do-not-accept"
+                    />
+                  </div>
+                  <div>
+                    <label class="fs-label" for="merchants-do-not-accept"
+                      >Merchants/stores won't accept cryptocurrency as payment</label
+                    >
+                  </div>
+                </div>
+
+                <div class="fs-checkbox-field">
+                  <div class="fs-checkbox-wrapper">
+                    <input
+                      class="fs-checkbox"
+                      id="worried-about-taxes-by-spending"
+                      name="why-not-purchase-with-crypto"
+                      type="checkbox"
+                      value="worried-about-taxes-by-spending"
+                    />
+                  </div>
+                  <div>
+                    <label class="fs-label" for="worried-about-taxes-by-spending"
+                      >I am worried about my tax reporting obligations at the end of the year</label
+                    >
+                  </div>
+                </div>
+
+                <div class="fs-checkbox-field">
+                  <div class="fs-checkbox-wrapper">
+                    <input
+                      class="fs-checkbox"
+                      id="spend-fiat-easier"
+                      name="why-not-purchase-with-crypto"
+                      type="checkbox"
+                      value="spend-fiat-easier"
+                    />
+                  </div>
+                  <div>
+                    <label class="fs-label" for="spend-fiat-easier"
+                      >It's not worth the trouble. I see no benefit to use cryptocurrency over regular fiat.</label
+                    >
+                  </div>
+                </div>
+
+                <div class="fs-checkbox-field">
+                  <div class="fs-checkbox-wrapper">
+                    <input
+                      class="fs-checkbox"
+                      id="other-not-spend-crypto"
+                      name="why-not-purchase-with-crypto"
+                      type="checkbox"
+                      value="oother-not-spend-crypto"
+                    />
+                  </div>
+                  <div>
+                    <label class="fs-label" for="other-not-spend-crypto">Other</label>
+                  </div>
+                </div>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="other-not-spend-crypto-text"
+                    name="why-not-purchase-with-crypto"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
             </div>
           </fieldset>
 
