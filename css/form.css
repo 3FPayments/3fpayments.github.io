@@ -89,6 +89,9 @@ fieldset {
     row-gap: 0.5rem;
 }
 
+.fs-field .indented-textinput {
+    margin-left: 1.75rem
+}
 .fs-label {
     color: var(--color-text-default);
     display: block;
