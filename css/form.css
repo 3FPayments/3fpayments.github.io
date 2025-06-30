@@ -77,6 +77,10 @@ fieldset {
   row-gap: 1.5rem;
 }
 
+.base-list li.form-item {
+  margin-bottom: 1.5rem;
+}
+
 .fs-form:where(.fs-layout__2-column) fieldset {
   column-gap: 1.5rem;
   grid-template-columns: 1fr 1fr;
