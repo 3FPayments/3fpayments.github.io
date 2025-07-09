@@ -602,6 +602,619 @@
               </div>
             </li>
 
+            <!-- TODO: numeric field -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">
+                  How many times a day do you use your debit, credit card, or mobile app to make a purchase?
+                </legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="number-of-daily-use-credit-debit-mobilepay"
+                    name="number-of-daily-use-credit-debit-mobilepay"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <!-- TODO: country field and if US then state field -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">Where do you live?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="country-residence"
+                    name="usa-state-residence"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">What is your profession?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="profession"
+                    name="profession"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">What is your income?</legend>
+                <div class="fs-radio-group">
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="income-level-under-50k"
+                        name="income-level"
+                        required
+                        type="radio"
+                        value="under 50k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="income-level-under-50k">Less than $50k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="income-level-50-to-100k"
+                        name="income-level"
+                        required
+                        type="radio"
+                        value="50-100k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="income-level-50-to-100k">$50k up to $100k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="income-level-100-to-200k"
+                        name="income-level"
+                        required
+                        type="radio"
+                        value="100-200k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="income-level-100-to-200k">$100k up to $200k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="income-level-200-to-250k"
+                        name="income-level"
+                        required
+                        type="radio"
+                        value="200-250k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="income-level-200-to-250k">$200k up to $250k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="income-level-250-to-600k"
+                        name="income-level"
+                        required
+                        type="radio"
+                        value="250-600k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="income-level-250-to-600k">$250k up to $600k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="income-level-over-600k"
+                        name="income-level"
+                        required
+                        type="radio"
+                        value="over 600k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="income-level-over-600k">Over $600k</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- TODO: numeric field -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">What percentage of your income is earned in crypto currency?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="percentage-of-income-in-crypto"
+                    name="percentage-of-income-in-crypto"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">What is your liquid net worth? [approximate USD equivalent]</legend>
+                <div class="fs-radio-group">
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="liquid-net-worth-under-100k"
+                        name="liquid-net-worth"
+                        required
+                        type="radio"
+                        value="under 100k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="liquid-net-worth-under-100k">Less than $100k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="liquid-net-worth-100-to-250k"
+                        name="liquid-net-worth"
+                        required
+                        type="radio"
+                        value="100-250k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="liquid-net-worth-100-to-250k">$100k up to $250k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="liquid-net-worth-250-to-500k"
+                        name="liquid-net-worth"
+                        required
+                        type="radio"
+                        value="250-500k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="liquid-net-worth-250-to-500k">$250k up to $500k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="liquid-net-worth-500-to-1mm"
+                        name="liquid-net-worth"
+                        required
+                        type="radio"
+                        value="500-1mm"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="liquid-net-worth-500-to-1mm">$500k up to $1mm</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="liquid-net-worth-1-to-5mm"
+                        name="liquid-net-worth"
+                        required
+                        type="radio"
+                        value="1-5mm"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="liquid-net-worth-1-to-5mm">$1mm up to $5mm</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="liquid-net-worth-5-to-30mm"
+                        name="liquid-net-worth"
+                        required
+                        type="radio"
+                        value="5-30mm"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="liquid-net-worth-5-to-30mm">$5mm up to $30mm</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="liquid-net-worth-over-30mm"
+                        name="liquid-net-worth"
+                        required
+                        type="radio"
+                        value="over 30mm"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="liquid-net-worth-over-30mm">Over $30mm</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- TODO: numeric field or drop down -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">What percentage of your liquid net worth is in crypto currency?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="liquid-net-worth-in-crypto"
+                    name="liquid-net-worth-in-crypto"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">
+                  What is your average monthly budget for general & household expenses? [approximate USD equivalent]
+                </legend>
+                <div class="fs-radio-group">
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="monthly-budget-household-general-under-5k"
+                        name="monthly-budget-household-general"
+                        required
+                        type="radio"
+                        value="under 5k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="monthly-budget-household-general-under-5k">Less than $5k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="monthly-budget-household-general-5-to-10k"
+                        name="monthly-budget-household-general"
+                        required
+                        type="radio"
+                        value="5-10k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="monthly-budget-household-general-5-to-10k">$5k up to $10k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="monthly-budget-household-general-10-to-20k"
+                        name="monthly-budget-household-general"
+                        required
+                        type="radio"
+                        value="10-20k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="monthly-budget-household-general-10-to-20k">$10k up to $20k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="monthly-budget-household-general-20-to-50k"
+                        name="monthly-budget-household-general"
+                        required
+                        type="radio"
+                        value="20-50k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="monthly-budget-household-general-20-to-50k">$20k up to $50k</label>
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="monthly-budget-household-general-over-50k"
+                        name="monthly-budget-household-general"
+                        required
+                        type="radio"
+                        value="over 50k"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="monthly-budget-household-general-over-50k">Over $50k</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- TODO: numeric field or drop down -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">On a scale of 1 to 10, how concerned are you about inflation?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="inflation-concern-level"
+                    name="inflation-concern-level"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">
+                  How much do you consider capital gains taxes when selling an investment?
+                </legend>
+                <div class="fs-radio-group">
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="capital-gains-concerns-none"
+                        name="capital-gains-concerns"
+                        required
+                        type="radio"
+                        value="yes"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="capital-gains-concerns-none"
+                        >Not at all, they do not affect my decision to sell my investments</label
+                      >
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="capital-gains-concerns-sometimes"
+                        name="capital-gains-concerns"
+                        required
+                        type="radio"
+                        value="no"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="capital-gains-concerns-sometimes"
+                        >Somewhat important, they are one of several factors I use to decide when to sell an
+                        investment</label
+                      >
+                    </div>
+                  </div>
+                  <div class="fs-radio-field">
+                    <div class="fs-radio-wrapper">
+                      <input
+                        class="fs-radio"
+                        id="capital-gains-concerns-always"
+                        name="capital-gains-concerns"
+                        required
+                        type="radio"
+                        value="no"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="capital-gains-concerns-always"
+                        >Very important, my capital gains status is a major factor in when I sell an investment</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- TODO: numeric field or drop down -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">What is your perception of the usefulness of cryptocurrency?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="crypto-usefulness-level"
+                    name="crypto-usefulness-level"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <!-- TODO: numeric field or drop down -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">How many banks do you use to custody your fiat money?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="number-fiat-banks"
+                    name="number-fiat-banks"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <!-- TODO: numeric field or drop down -->
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">How satisfied are you with your favorite bank?</legend>
+                <div class="fs-field indented-textinput">
+                  <input
+                    class="fs-input"
+                    type="text"
+                    id="satisfaction-of-favorite-fiat-bank"
+                    name="satisfaction-of-favorite-fiat-bank"
+                    placeholder="Please specify..."
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="form-item">
+              <div class="fs-field">
+                <legend class="fs-label">What is your biggest issue or problem with your bank?</legend>
+                <div class="fs-checkbox-group">
+                  <div class="fs-checkbox-field">
+                    <div class="fs-checkbox-wrapper">
+                      <input
+                        class="fs-checkbox"
+                        id="fiat-bank-pain-point-high-fees"
+                        name="fiat-bank-pain-point"
+                        type="checkbox"
+                        value="fiat-bank-pain-point-high-fees"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="fiat-bank-pain-point-high-fees">High fees</label>
+                    </div>
+                  </div>
+
+                  <div class="fs-checkbox-field">
+                    <div class="fs-checkbox-wrapper">
+                      <input
+                        class="fs-checkbox"
+                        id="fiat-bank-pain-point-low-interest"
+                        name="fiat-bank-pain-point"
+                        type="checkbox"
+                        value="fiat-bank-pain-point-low-interest"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="fiat-bank-pain-point-low-interest">Low interest</label>
+                    </div>
+                  </div>
+
+                  <div class="fs-checkbox-field">
+                    <div class="fs-checkbox-wrapper">
+                      <input
+                        class="fs-checkbox"
+                        id="fiat-bank-pain-point-poor-customer-service"
+                        name="fiat-bank-pain-point"
+                        type="checkbox"
+                        value="fiat-bank-pain-point-poor-customer-service"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="fiat-bank-pain-point-poor-customer-service"
+                        >Poor customer service</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="fs-checkbox-field">
+                    <div class="fs-checkbox-wrapper">
+                      <input
+                        class="fs-checkbox"
+                        id="fiat-bank-pain-point-poor-online-banking"
+                        name="fiat-bank-pain-point"
+                        type="checkbox"
+                        value="fiat-bank-pain-point-poor-online-banking"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="fiat-bank-pain-point-poor-online-banking">Poor online banking</label>
+                    </div>
+                  </div>
+
+                  <div class="fs-checkbox-field">
+                    <div class="fs-checkbox-wrapper">
+                      <input
+                        class="fs-checkbox"
+                        id="fiat-bank-pain-point-poor-online-security"
+                        name="fiat-bank-pain-point"
+                        type="checkbox"
+                        value="fiat-bank-pain-point-poor-online-security"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="fiat-bank-pain-point-poor-online-security"
+                        >Poor online security</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="fs-checkbox-field">
+                    <div class="fs-checkbox-wrapper">
+                      <input
+                        class="fs-checkbox"
+                        id="other-fiat-bank-pain-point"
+                        name="fiat-bank-pain-point"
+                        type="checkbox"
+                        value="other-fiat-bank-pain-point"
+                      />
+                    </div>
+                    <div>
+                      <label class="fs-label" for="other-fiat-bank-pain-point">Other</label>
+                    </div>
+                  </div>
+                  <div class="fs-field indented-textinput">
+                    <input
+                      class="fs-input"
+                      type="text"
+                      id="other-fiat-bank-pain-point-text"
+                      name="fiat-bank-pain-point"
+                      placeholder="Please specify..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+
             <div class="fs-button-group">
               <button class="fs-button" type="submit">Submit</button>
             </div>
