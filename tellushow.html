@@ -617,21 +617,22 @@
               </div>
             </li>
 
-            <!-- TODO: numeric field -->
             <li class="form-item">
               <div class="fs-field">
                 <legend class="fs-label">
                   How many times a day do you use your debit, credit card, or mobile app to make a purchase?
                 </legend>
-                <div class="fs-field indented-textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="number-of-daily-use-credit-debit-mobilepay"
-                    name="number-of-daily-use-credit-debit-mobilepay"
-                    placeholder="Please specify..."
-                  />
-                </div>
+                <select
+                  class="fs-select indented-textinput"
+                  id="number-of-daily-use-credit-debit-mobilepay"
+                  name="number-of-daily-use-credit-debit-mobilepay"
+                >
+                  <option value="" disabled selected></option>
+                  <option value="1-per-day">1 time a day</option>
+                  <option value="2-5-per-day">2-5 times a day</option>
+                  <option value="5-10-per-day">5-10 times a day</option>
+                  <option value=">11-per-day">11+ times a day</option>
+                </select>
               </div>
             </li>
 
