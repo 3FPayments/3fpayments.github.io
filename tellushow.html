@@ -765,19 +765,23 @@
               </div>
             </li>
 
-            <!-- TODO: numeric field -->
             <li class="form-item">
               <div class="fs-field">
                 <legend class="fs-label">What percentage of your income is earned in crypto currency?</legend>
-                <div class="fs-field indented-textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="percentage-of-income-in-crypto"
-                    name="percentage-of-income-in-crypto"
-                    placeholder="Please specify..."
-                  />
-                </div>
+                <select
+                  class="fs-select indented-textinput"
+                  id="percentage-of-income-in-crypto"
+                  name="percentage-of-income-in-crypto"
+                >
+                  <option value="" disabled selected></option>
+                  <option value="0">0%</option>
+                  <option value="1-to-10">1-10%</option>
+                  <option value="11-to-20">11-20%</option>
+                  <option value="21-to-50">21-50%</option>
+                  <option value="51-to-80">51-80%</option>
+                  <option value="81-to-99">81-99%</option>
+                  <option value="100">100%</option>
+                </select>
               </div>
             </li>
 
@@ -894,19 +898,23 @@
               </div>
             </li>
 
-            <!-- TODO: numeric field or drop down -->
             <li class="form-item">
               <div class="fs-field">
                 <legend class="fs-label">What percentage of your liquid net worth is in crypto currency?</legend>
-                <div class="fs-field indented-textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="liquid-net-worth-in-crypto"
-                    name="liquid-net-worth-in-crypto"
-                    placeholder="Please specify..."
-                  />
-                </div>
+                <select
+                  class="fs-select indented-textinput"
+                  id="liquid-net-worth-in-crypto"
+                  name="liquid-net-worth-in-crypto"
+                >
+                  <option value="" disabled selected></option>
+                  <option value="0">0%</option>
+                  <option value="1-to-10">1-10%</option>
+                  <option value="11-to-20">11-20%</option>
+                  <option value="21-to-50">21-50%</option>
+                  <option value="51-to-80">51-80%</option>
+                  <option value="81-to-99">81-99%</option>
+                  <option value="100">100%</option>
+                </select>
               </div>
             </li>
 
@@ -995,19 +1003,26 @@
               </div>
             </li>
 
-            <!-- TODO: numeric field or drop down -->
             <li class="form-item">
               <div class="fs-field">
                 <legend class="fs-label">On a scale of 1 to 10, how concerned are you about inflation?</legend>
-                <div class="fs-field indented-textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="inflation-concern-level"
-                    name="inflation-concern-level"
-                    placeholder="Please specify..."
-                  />
-                </div>
+                <select
+                  class="fs-select indented-textinput"
+                  id="inflation-concern-level"
+                  name="inflation-concern-level"
+                >
+                  <option value="" disabled selected></option>
+                  <option value="10">10 - extremely concerned</option>
+                  <option value="9">9</option>
+                  <option value="8">8</option>
+                  <option value="7">7 - cautiously concerned</option>
+                  <option value="6">6</option>
+                  <option value="5">5 - moderately concerned</option>
+                  <option value="4">4</option>
+                  <option value="3">3 - mildly concerned</option>
+                  <option value="2">2</option>
+                  <option value="1">1 - not concerned</option>
+                </select>
               </div>
             </li>
 
@@ -1073,53 +1088,64 @@
               </div>
             </li>
 
-            <!-- TODO: numeric field or drop down -->
             <li class="form-item">
               <div class="fs-field">
                 <legend class="fs-label">
-                  On a scale of 1-10,what is your perception of the usefulness of cryptocurrency?
+                  On a scale of 1-10, what is your perception of the usefulness of cryptocurrency?
                 </legend>
-                <div class="fs-field indented-textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="crypto-usefulness-level"
-                    name="crypto-usefulness-level"
-                    placeholder="Please specify..."
-                  />
-                </div>
+                <select
+                  class="fs-select indented-textinput"
+                  id="crypto-usefulness-level"
+                  name="crypto-usefulness-level"
+                >
+                  <option value="" disabled selected></option>
+                  <option value="10">10 - extremely useful</option>
+                  <option value="9">9</option>
+                  <option value="8">8</option>
+                  <option value="7">7 - very useful</option>
+                  <option value="6">6</option>
+                  <option value="5">5 - moderately useful</option>
+                  <option value="4">4</option>
+                  <option value="3">3 - mildly useful</option>
+                  <option value="2">2</option>
+                  <option value="1">1 - not useful</option>
+                </select>
               </div>
             </li>
 
-            <!-- TODO: numeric field or drop down -->
             <li class="form-item">
               <div class="fs-field">
                 <legend class="fs-label">How many banks do you use to custody your fiat money?</legend>
-                <div class="fs-field indented-textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="number-fiat-banks"
-                    name="number-fiat-banks"
-                    placeholder="Please specify..."
-                  />
-                </div>
+                <select class="fs-select indented-textinput" id="number-fiat-banks" name="number-fiat-banks">
+                  <option value="" disabled selected></option>
+                  <option value="1-bank">1 bank</option>
+                  <option value="2-5-banks">2-5 banks</option>
+                  <option value="5-10-banks">5-10 banks</option>
+                  <option value=">11-banks">11+ banks</option>
+                </select>
               </div>
             </li>
 
-            <!-- TODO: numeric field or drop down -->
             <li class="form-item">
               <div class="fs-field">
                 <legend class="fs-label">On a scale of 1-10, how satisfied are you with your favorite bank?</legend>
-                <div class="fs-field indented-textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="satisfaction-of-favorite-fiat-bank"
-                    name="satisfaction-of-favorite-fiat-bank"
-                    placeholder="Please specify..."
-                  />
-                </div>
+                <select
+                  class="fs-select indented-textinput"
+                  id="satisfaction-of-favorite-fiat-bank"
+                  name="satisfaction-of-favorite-fiat-bank"
+                >
+                  <option value="" disabled selected></option>
+                  <option value="10">10 - extremely satisfied</option>
+                  <option value="9">9</option>
+                  <option value="8">8</option>
+                  <option value="7">7 - cautiously satisfied</option>
+                  <option value="6">6</option>
+                  <option value="5">5 - moderately satisfied</option>
+                  <option value="4">4</option>
+                  <option value="3">3 - mildly satisfied</option>
+                  <option value="2">2</option>
+                  <option value="1">1 - not satisfied</option>
+                </select>
               </div>
             </li>
 
@@ -1471,7 +1497,7 @@
                   at the point of sale for delivery to the merchant. We also offer a tax management solution to optimize
                   your capital gains tax obligation by specifically identifying your purchase lot that will be sold at
                   the time of the transaction. We will KYC your account and provide you with a custodial wallet that you
-                  can use to transfer the crypto that you want to spend. Would you be interested in this product
+                  can use to transfer the crypto that you want to spend. Would you be interested in this product?
                 </legend>
                 <div class="fs-radio-group">
                   <div class="fs-radio-field">
@@ -2003,11 +2029,11 @@
                   <label class="fs-label" for="contact_method">Preferred method of contact</label>
                   <select class="fs-select" id="contact_method" name="contact_method">
                     <option value="" disabled selected></option>
-                    <option value="search-engines">Email</option>
-                    <option value="company-website">Phone</option>
-                    <option value="social-media">Whatsapp</option>
-                    <option value="crypto-news">Signal</option>
-                    <option value="crypto-news">Telegram</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="whatsapp">Whatsapp</option>
+                    <option value="signal">Signal</option>
+                    <option value="telegram">Telegram</option>
                   </select>
                 </div>
                 <div class="fs-field textinput">
