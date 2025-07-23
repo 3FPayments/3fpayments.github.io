@@ -346,3 +346,11 @@ fieldset {
 .fs-textarea::placeholder {
   color: var(--color-text-muted);
 }
+
+/* Anti-spam honeypot field */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
