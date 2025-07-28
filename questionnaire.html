@@ -2367,6 +2367,7 @@
           'Colorado',
           'Connecticut',
           'Delaware',
+          'District of Columbia',
           'Florida',
           'Georgia',
           'Hawaii',
@@ -2409,7 +2410,11 @@
           'West Virginia',
           'Wisconsin',
           'Wyoming',
-          'District of Columbia',
+          'American Samoa',
+          'Guam',
+          'Northern Mariana Islands',
+          'Puerto Rico',
+          'Virgin Islands',
         ],
         Canada: [
           'Alberta',
@@ -2566,15 +2571,18 @@
             option.value = state;
             option.textContent = state;
             stateSelect.appendChild(option);
+            stateSelect.hidden = false;
           });
           stateSelect.disabled = false;
         } else if (selectedCountry && selectedCountry !== '') {
           // For countries without predefined states, allow text input
-          stateSelect.innerHTML = '<option value="">Please specify in comments</option>';
+          stateSelect.innerHTML = '<option value=""></option>';
           stateSelect.disabled = true;
+          stateSelect.hidden = true;
         } else {
           stateSelect.innerHTML = '<option value="">First select your country</option>';
           stateSelect.disabled = true;
+          stateSelect.hidden = false;
         }
       }
 
