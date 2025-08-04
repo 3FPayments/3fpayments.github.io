@@ -356,5 +356,21 @@ fieldset {
 }
 
 .preamble h3 {
-    text-align: center;
+  text-align: center;
+}
+
+/* CSS for the animation of making visible the hidden questions */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

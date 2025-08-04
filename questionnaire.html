@@ -128,6 +128,7 @@
                         required
                         type="radio"
                         value="yes"
+                        onchange="handlePurchaseInterest()"
                       />
                     </div>
                     <div>
@@ -143,6 +144,7 @@
                         required
                         type="radio"
                         value="no"
+                        onchange="handlePurchaseInterest()"
                       />
                     </div>
                     <div>
@@ -464,1830 +466,1837 @@
               </div>
             </li>
 
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  Do you use a credit card or a debit card for your daily spending? (check all that apply)
-                </legend>
-                <div class="fs-checkbox-group">
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="daily-credit-card"
-                        name="daily-card-spending"
-                        type="checkbox"
-                        value="daily-credit-card"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="daily-credit-card">Credit Card</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="daily-debit-card"
-                        name="daily-card-spending"
-                        type="checkbox"
-                        value="daily-debit-card"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="daily-debit-card">Debit Card</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  What payment method do you use for your monthly spending? (check all that apply)
-                </legend>
-                <div class="fs-checkbox-group">
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="monthly-spending-credit-card"
-                        name="monthly-spending"
-                        type="checkbox"
-                        value="monthly-spending-credit-card"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-spending-credit-card">Credit Card</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="monthly-spending-debit-card"
-                        name="monthly-spending"
-                        type="checkbox"
-                        value="monthly-spending-debit-card"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-spending-debit-card">Debit Card</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="monthly-spending-bill-pay"
-                        name="monthly-spending"
-                        type="checkbox"
-                        value="monthly-spending-bill-pay"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-spending-bill-pay">Bill Pay</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="monthly-spending-cash"
-                        name="monthly-spending"
-                        type="checkbox"
-                        value="monthly-spending-cash"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-spending-cash">Cash</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="other-monthly-spending"
-                        name="monthly-spending"
-                        type="checkbox"
-                        value="other-monthly-spending"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="other-monthly-spending">Other</label>
-                    </div>
-                  </div>
-                  <div class="fs-field indented-textinput">
-                    <input
-                      class="fs-input"
-                      type="text"
-                      id="other-monthly-spending-text"
-                      name="monthly-spending"
-                      placeholder="Please specify..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">Do you use a mobile app for payment?</legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="do-you-pay-with-moblie-app-yes"
-                        name="do-you-pay-with-moblie-app"
-                        type="radio"
-                        value="yes"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="do-you-pay-with-moblie-app-yes">Yes</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="do-you-pay-with-moblie-app-no"
-                        name="do-you-pay-with-moblie-app"
-                        type="radio"
-                        value="no"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="do-you-pay-with-moblie-app-no">No</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  How many times a day do you use your debit, credit card, or mobile app to make a purchase?
-                </legend>
-                <select
-                  class="fs-select indented-textinput"
-                  id="number-of-daily-use-credit-debit-mobilepay"
-                  name="number-of-daily-use-credit-debit-mobilepay"
-                >
-                  <option value="" disabled selected></option>
-                  <option value="1-per-day">1 time a day</option>
-                  <option value="2-5-per-day">2-5 times a day</option>
-                  <option value="5-10-per-day">5-10 times a day</option>
-                  <option value=">11-per-day">11+ times a day</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">Where do you live?</legend>
-                <select
-                  class="fs-select indented-textinput"
-                  id="country-residence"
-                  name="country-residence"
-                  onchange="updateStates()"
-                >
-                  <option value="">Please select your country</option>
-                  <option value="United States of America">United States of America</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                  <option value="Albania">Albania</option>
-                  <option value="Algeria">Algeria</option>
-                  <option value="Andorra">Andorra</option>
-                  <option value="Angola">Angola</option>
-                  <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                  <option value="Argentina">Argentina</option>
-                  <option value="Armenia">Armenia</option>
-                  <option value="Australia">Australia</option>
-                  <option value="Austria">Austria</option>
-                  <option value="Azerbaijan">Azerbaijan</option>
-                  <option value="Bahamas">Bahamas</option>
-                  <option value="Bahrain">Bahrain</option>
-                  <option value="Bangladesh">Bangladesh</option>
-                  <option value="Barbados">Barbados</option>
-                  <option value="Belarus">Belarus</option>
-                  <option value="Belgium">Belgium</option>
-                  <option value="Belize">Belize</option>
-                  <option value="Benin">Benin</option>
-                  <option value="Bhutan">Bhutan</option>
-                  <option value="Bolivia">Bolivia</option>
-                  <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                  <option value="Botswana">Botswana</option>
-                  <option value="Brazil">Brazil</option>
-                  <option value="Brunei">Brunei</option>
-                  <option value="Bulgaria">Bulgaria</option>
-                  <option value="Burkina Faso">Burkina Faso</option>
-                  <option value="Burundi">Burundi</option>
-                  <option value="Cabo Verde">Cabo Verde</option>
-                  <option value="Cambodia">Cambodia</option>
-                  <option value="Cameroon">Cameroon</option>
-                  <option value="Central African Republic">Central African Republic</option>
-                  <option value="Chad">Chad</option>
-                  <option value="Chile">Chile</option>
-                  <option value="China">China</option>
-                  <option value="Colombia">Colombia</option>
-                  <option value="Comoros">Comoros</option>
-                  <option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the</option>
-                  <option value="Congo, Republic of the">Congo, Republic of the</option>
-                  <option value="Costa Rica">Costa Rica</option>
-                  <option value="Cote d'Ivoire">Cote d'Ivoire</option>
-                  <option value="Croatia">Croatia</option>
-                  <option value="Cuba">Cuba</option>
-                  <option value="Cyprus">Cyprus</option>
-                  <option value="Czechia">Czechia</option>
-                  <option value="Denmark">Denmark</option>
-                  <option value="Djibouti">Djibouti</option>
-                  <option value="Dominica">Dominica</option>
-                  <option value="Dominican Republic">Dominican Republic</option>
-                  <option value="Ecuador">Ecuador</option>
-                  <option value="Egypt">Egypt</option>
-                  <option value="El Salvador">El Salvador</option>
-                  <option value="Equatorial Guinea">Equatorial Guinea</option>
-                  <option value="Eritrea">Eritrea</option>
-                  <option value="Estonia">Estonia</option>
-                  <option value="Eswatini">Eswatini</option>
-                  <option value="Ethiopia">Ethiopia</option>
-                  <option value="Fiji">Fiji</option>
-                  <option value="Finland">Finland</option>
-                  <option value="France">France</option>
-                  <option value="Gabon">Gabon</option>
-                  <option value="Gambia">Gambia</option>
-                  <option value="Georgia">Georgia</option>
-                  <option value="Germany">Germany</option>
-                  <option value="Ghana">Ghana</option>
-                  <option value="Greece">Greece</option>
-                  <option value="Grenada">Grenada</option>
-                  <option value="Guatemala">Guatemala</option>
-                  <option value="Guinea">Guinea</option>
-                  <option value="Guinea-Bissau">Guinea-Bissau</option>
-                  <option value="Guyana">Guyana</option>
-                  <option value="Haiti">Haiti</option>
-                  <option value="Honduras">Honduras</option>
-                  <option value="Hungary">Hungary</option>
-                  <option value="Iceland">Iceland</option>
-                  <option value="India">India</option>
-                  <option value="Indonesia">Indonesia</option>
-                  <option value="Iran">Iran</option>
-                  <option value="Iraq">Iraq</option>
-                  <option value="Ireland">Ireland</option>
-                  <option value="Israel">Israel</option>
-                  <option value="Italy">Italy</option>
-                  <option value="Jamaica">Jamaica</option>
-                  <option value="Japan">Japan</option>
-                  <option value="Jordan">Jordan</option>
-                  <option value="Kazakhstan">Kazakhstan</option>
-                  <option value="Kenya">Kenya</option>
-                  <option value="Kiribati">Kiribati</option>
-                  <option value="Kosovo">Kosovo</option>
-                  <option value="Kuwait">Kuwait</option>
-                  <option value="Kyrgyzstan">Kyrgyzstan</option>
-                  <option value="Laos">Laos</option>
-                  <option value="Latvia">Latvia</option>
-                  <option value="Lebanon">Lebanon</option>
-                  <option value="Lesotho">Lesotho</option>
-                  <option value="Liberia">Liberia</option>
-                  <option value="Libya">Libya</option>
-                  <option value="Liechtenstein">Liechtenstein</option>
-                  <option value="Lithuania">Lithuania</option>
-                  <option value="Luxembourg">Luxembourg</option>
-                  <option value="Madagascar">Madagascar</option>
-                  <option value="Malawi">Malawi</option>
-                  <option value="Malaysia">Malaysia</option>
-                  <option value="Maldives">Maldives</option>
-                  <option value="Mali">Mali</option>
-                  <option value="Malta">Malta</option>
-                  <option value="Marshall Islands">Marshall Islands</option>
-                  <option value="Mauritania">Mauritania</option>
-                  <option value="Mauritius">Mauritius</option>
-                  <option value="Mexico">Mexico</option>
-                  <option value="Micronesia">Micronesia</option>
-                  <option value="Moldova">Moldova</option>
-                  <option value="Monaco">Monaco</option>
-                  <option value="Mongolia">Mongolia</option>
-                  <option value="Montenegro">Montenegro</option>
-                  <option value="Morocco">Morocco</option>
-                  <option value="Mozambique">Mozambique</option>
-                  <option value="Myanmar">Myanmar</option>
-                  <option value="Namibia">Namibia</option>
-                  <option value="Nauru">Nauru</option>
-                  <option value="Nepal">Nepal</option>
-                  <option value="Netherlands">Netherlands</option>
-                  <option value="New Zealand">New Zealand</option>
-                  <option value="Nicaragua">Nicaragua</option>
-                  <option value="Niger">Niger</option>
-                  <option value="Nigeria">Nigeria</option>
-                  <option value="North Korea">North Korea</option>
-                  <option value="North Macedonia">North Macedonia</option>
-                  <option value="Norway">Norway</option>
-                  <option value="Oman">Oman</option>
-                  <option value="Pakistan">Pakistan</option>
-                  <option value="Palau">Palau</option>
-                  <option value="Palestine">Palestine</option>
-                  <option value="Panama">Panama</option>
-                  <option value="Papua New Guinea">Papua New Guinea</option>
-                  <option value="Paraguay">Paraguay</option>
-                  <option value="Peru">Peru</option>
-                  <option value="Philippines">Philippines</option>
-                  <option value="Poland">Poland</option>
-                  <option value="Portugal">Portugal</option>
-                  <option value="Qatar">Qatar</option>
-                  <option value="Romania">Romania</option>
-                  <option value="Russia">Russia</option>
-                  <option value="Rwanda">Rwanda</option>
-                  <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                  <option value="Saint Lucia">Saint Lucia</option>
-                  <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-                  <option value="Samoa">Samoa</option>
-                  <option value="San Marino">San Marino</option>
-                  <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                  <option value="Saudi Arabia">Saudi Arabia</option>
-                  <option value="Senegal">Senegal</option>
-                  <option value="Serbia">Serbia</option>
-                  <option value="Seychelles">Seychelles</option>
-                  <option value="Sierra Leone">Sierra Leone</option>
-                  <option value="Singapore">Singapore</option>
-                  <option value="Slovakia">Slovakia</option>
-                  <option value="Slovenia">Slovenia</option>
-                  <option value="Solomon Islands">Solomon Islands</option>
-                  <option value="Somalia">Somalia</option>
-                  <option value="South Africa">South Africa</option>
-                  <option value="South Korea">South Korea</option>
-                  <option value="South Sudan">South Sudan</option>
-                  <option value="Spain">Spain</option>
-                  <option value="Sri Lanka">Sri Lanka</option>
-                  <option value="Sudan">Sudan</option>
-                  <option value="Suriname">Suriname</option>
-                  <option value="Sweden">Sweden</option>
-                  <option value="Switzerland">Switzerland</option>
-                  <option value="Syria">Syria</option>
-                  <option value="Taiwan">Taiwan</option>
-                  <option value="Tajikistan">Tajikistan</option>
-                  <option value="Tanzania">Tanzania</option>
-                  <option value="Thailand">Thailand</option>
-                  <option value="Timor-Leste">Timor-Leste</option>
-                  <option value="Togo">Togo</option>
-                  <option value="Tonga">Tonga</option>
-                  <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                  <option value="Tunisia">Tunisia</option>
-                  <option value="Turkey">Turkey</option>
-                  <option value="Turkmenistan">Turkmenistan</option>
-                  <option value="Tuvalu">Tuvalu</option>
-                  <option value="Uganda">Uganda</option>
-                  <option value="Ukraine">Ukraine</option>
-                  <option value="United Arab Emirates">United Arab Emirates</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Uruguay">Uruguay</option>
-                  <option value="Uzbekistan">Uzbekistan</option>
-                  <option value="Vanuatu">Vanuatu</option>
-                  <option value="Vatican City (Holy See)">Vatican City (Holy See)</option>
-                  <option value="Venezuela">Venezuela</option>
-                  <option value="Vietnam">Vietnam</option>
-                  <option value="Yemen">Yemen</option>
-                  <option value="Zambia">Zambia</option>
-                  <option value="Zimbabwe">Zimbabwe</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
-              <br />
-              <div class="fs-field">
-                <select class="fs-select indented-textinput" id="state-residence" name="state-residence">
-                  <option value="">First select your country</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What is your profession? (Choose your closest group)</legend>
-                <select class="fs-select indented-textinput" id="profession" name="profession">
-                  <option value="" disabled selected></option>
-                  <option value="Architecture and Engineering Occupations">
-                    Architecture and Engineering Occupations
-                  </option>
-                  <option value="Arts, Design, Entertainment, Sports, and Media Occupations">
-                    Arts, Design, Entertainment, Sports, and Media Occupations
-                  </option>
-                  <option value="Building and Grounds Cleaning and Maintenance Occupations">
-                    Building and Grounds Cleaning and Maintenance Occupations
-                  </option>
-                  <option value="Business and Financial Operations Occupations">
-                    Business and Financial Operations Occupations
-                  </option>
-                  <option value="Community and Social Service Occupations">
-                    Community and Social Service Occupations
-                  </option>
-                  <option value="Computer and Mathematical Occupations">Computer and Mathematical Occupations</option>
-                  <option value="Construction and Extraction Occupations">
-                    Construction and Extraction Occupations
-                  </option>
-                  <option value="Educational Instruction and Library Occupations">
-                    Educational Instruction and Library Occupations
-                  </option>
-                  <option value="Farming, Fishing, and Forestry Occupations">
-                    Farming, Fishing, and Forestry Occupations
-                  </option>
-                  <option value="Food Preparation and Serving Related Occupations">
-                    Food Preparation and Serving Related Occupations
-                  </option>
-                  <option value="Healthcare Practitioners and Technical Occupations">
-                    Healthcare Practitioners and Technical Occupations
-                  </option>
-                  <option value="Healthcare Support Occupations">Healthcare Support Occupations</option>
-                  <option value="Installation, Maintenance, and Repair Occupations">
-                    Installation, Maintenance, and Repair Occupations
-                  </option>
-                  <option value="Legal Occupations">Legal Occupations</option>
-                  <option value="Life, Physical, and Social Science Occupations">
-                    Life, Physical, and Social Science Occupations
-                  </option>
-                  <option value="Management Occupations">Management Occupations</option>
-                  <option value="Military Specific Occupations">Military Specific Occupations</option>
-                  <option value="Office and Administrative Support Occupations">
-                    Office and Administrative Support Occupations
-                  </option>
-                  <option value="Personal Care and Service Occupations">Personal Care and Service Occupations</option>
-                  <option value="Production Occupations">Production Occupations</option>
-                  <option value="Protective Service Occupations">Protective Service Occupations</option>
-                  <option value="Sales and Related Occupations">Sales and Related Occupations</option>
-                  <option value="Transportation and Material Moving Occupations">
-                    Transportation and Material Moving Occupations
-                  </option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What is your income?</legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="income-level-under-50k"
-                        name="income-level"
-                        type="radio"
-                        value="under 50k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="income-level-under-50k">Less than $50k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="income-level-50-to-100k"
-                        name="income-level"
-                        type="radio"
-                        value="50-100k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="income-level-50-to-100k">$50k up to $100k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="income-level-100-to-200k"
-                        name="income-level"
-                        type="radio"
-                        value="100-200k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="income-level-100-to-200k">$100k up to $200k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="income-level-200-to-250k"
-                        name="income-level"
-                        type="radio"
-                        value="200-250k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="income-level-200-to-250k">$200k up to $250k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="income-level-250-to-600k"
-                        name="income-level"
-                        type="radio"
-                        value="250-600k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="income-level-250-to-600k">$250k up to $600k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="income-level-over-600k"
-                        name="income-level"
-                        type="radio"
-                        value="over 600k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="income-level-over-600k">Over $600k</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What percentage of your income is earned in crypto currency?</legend>
-                <select
-                  class="fs-select indented-textinput"
-                  id="percentage-of-income-in-crypto"
-                  name="percentage-of-income-in-crypto"
-                >
-                  <option value="" disabled selected></option>
-                  <option value="0">0%</option>
-                  <option value="1-to-10">1-10%</option>
-                  <option value="11-to-20">11-20%</option>
-                  <option value="21-to-50">21-50%</option>
-                  <option value="51-to-80">51-80%</option>
-                  <option value="81-to-99">81-99%</option>
-                  <option value="100">100%</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What is your liquid net worth? [approximate USD equivalent]</legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="liquid-net-worth-under-100k"
-                        name="liquid-net-worth"
-                        type="radio"
-                        value="under 100k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="liquid-net-worth-under-100k">Less than $100k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="liquid-net-worth-100-to-250k"
-                        name="liquid-net-worth"
-                        type="radio"
-                        value="100-250k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="liquid-net-worth-100-to-250k">$100k up to $250k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="liquid-net-worth-250-to-500k"
-                        name="liquid-net-worth"
-                        type="radio"
-                        value="250-500k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="liquid-net-worth-250-to-500k">$250k up to $500k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="liquid-net-worth-500-to-1mm"
-                        name="liquid-net-worth"
-                        type="radio"
-                        value="500-1mm"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="liquid-net-worth-500-to-1mm">$500k up to $1mm</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="liquid-net-worth-1-to-5mm"
-                        name="liquid-net-worth"
-                        type="radio"
-                        value="1-5mm"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="liquid-net-worth-1-to-5mm">$1mm up to $5mm</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="liquid-net-worth-5-to-30mm"
-                        name="liquid-net-worth"
-                        type="radio"
-                        value="5-30mm"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="liquid-net-worth-5-to-30mm">$5mm up to $30mm</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="liquid-net-worth-over-30mm"
-                        name="liquid-net-worth"
-                        type="radio"
-                        value="over 30mm"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="liquid-net-worth-over-30mm">Over $30mm</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What percentage of your liquid net worth is in crypto currency?</legend>
-                <select
-                  class="fs-select indented-textinput"
-                  id="liquid-net-worth-in-crypto"
-                  name="liquid-net-worth-in-crypto"
-                >
-                  <option value="" disabled selected></option>
-                  <option value="0">0%</option>
-                  <option value="1-to-10">1-10%</option>
-                  <option value="11-to-20">11-20%</option>
-                  <option value="21-to-50">21-50%</option>
-                  <option value="51-to-80">51-80%</option>
-                  <option value="81-to-99">81-99%</option>
-                  <option value="100">100%</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  What is your average monthly budget for general & household expenses? [approximate USD equivalent]
-                </legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="monthly-budget-household-general-under-5k"
-                        name="monthly-budget-household-general"
-                        type="radio"
-                        value="under 5k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-budget-household-general-under-5k">Less than $5k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="monthly-budget-household-general-5-to-10k"
-                        name="monthly-budget-household-general"
-                        type="radio"
-                        value="5-10k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-budget-household-general-5-to-10k">$5k up to $10k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="monthly-budget-household-general-10-to-20k"
-                        name="monthly-budget-household-general"
-                        type="radio"
-                        value="10-20k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-budget-household-general-10-to-20k">$10k up to $20k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="monthly-budget-household-general-20-to-50k"
-                        name="monthly-budget-household-general"
-                        type="radio"
-                        value="20-50k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-budget-household-general-20-to-50k">$20k up to $50k</label>
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="monthly-budget-household-general-over-50k"
-                        name="monthly-budget-household-general"
-                        type="radio"
-                        value="over 50k"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="monthly-budget-household-general-over-50k">Over $50k</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">On a scale of 1 to 10, how concerned are you about inflation?</legend>
-                <select
-                  class="fs-select indented-textinput"
-                  id="inflation-concern-level"
-                  name="inflation-concern-level"
-                >
-                  <option value="" disabled selected></option>
-                  <option value="10">10 - extremely concerned</option>
-                  <option value="9">9</option>
-                  <option value="8">8</option>
-                  <option value="7">7 - cautiously concerned</option>
-                  <option value="6">6</option>
-                  <option value="5">5 - moderately concerned</option>
-                  <option value="4">4</option>
-                  <option value="3">3 - mildly concerned</option>
-                  <option value="2">2</option>
-                  <option value="1">1 - not concerned</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  How much do you consider capital gains taxes when selling an investment?
-                </legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="capital-gains-concerns-none"
-                        name="capital-gains-concerns"
-                        type="radio"
-                        value="yes"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="capital-gains-concerns-none"
-                        >Not at all, they do not affect my decision to sell my investments</label
-                      >
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="capital-gains-concerns-sometimes"
-                        name="capital-gains-concerns"
-                        type="radio"
-                        value="no"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="capital-gains-concerns-sometimes"
-                        >Somewhat important, they are one of several factors I use to decide when to sell an
-                        investment</label
-                      >
-                    </div>
-                  </div>
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="capital-gains-concerns-always"
-                        name="capital-gains-concerns"
-                        type="radio"
-                        value="no"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="capital-gains-concerns-always"
-                        >Very important, my capital gains status is a major factor in when I sell an investment</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  On a scale of 1-10, what is your perception of the usefulness of cryptocurrency?
-                </legend>
-                <select
-                  class="fs-select indented-textinput"
-                  id="crypto-usefulness-level"
-                  name="crypto-usefulness-level"
-                >
-                  <option value="" disabled selected></option>
-                  <option value="10">10 - extremely useful</option>
-                  <option value="9">9</option>
-                  <option value="8">8</option>
-                  <option value="7">7 - very useful</option>
-                  <option value="6">6</option>
-                  <option value="5">5 - moderately useful</option>
-                  <option value="4">4</option>
-                  <option value="3">3 - mildly useful</option>
-                  <option value="2">2</option>
-                  <option value="1">1 - not useful</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">How many banks do you use to custody your fiat money?</legend>
-                <select class="fs-select indented-textinput" id="number-fiat-banks" name="number-fiat-banks">
-                  <option value="" disabled selected></option>
-                  <option value="1-bank">1 bank</option>
-                  <option value="2-5-banks">2-5 banks</option>
-                  <option value="5-10-banks">5-10 banks</option>
-                  <option value=">11-banks">11+ banks</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">On a scale of 1-10, how satisfied are you with your favorite bank?</legend>
-                <select
-                  class="fs-select indented-textinput"
-                  id="satisfaction-of-favorite-fiat-bank"
-                  name="satisfaction-of-favorite-fiat-bank"
-                >
-                  <option value="" disabled selected></option>
-                  <option value="10">10 - extremely satisfied</option>
-                  <option value="9">9</option>
-                  <option value="8">8</option>
-                  <option value="7">7 - cautiously satisfied</option>
-                  <option value="6">6</option>
-                  <option value="5">5 - moderately satisfied</option>
-                  <option value="4">4</option>
-                  <option value="3">3 - mildly satisfied</option>
-                  <option value="2">2</option>
-                  <option value="1">1 - not satisfied</option>
-                </select>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  What is your biggest issue or problem with your bank? (check all that apply)
-                </legend>
-                <div class="fs-checkbox-group">
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-pain-point-high-fees"
-                        name="fiat-bank-pain-point"
-                        type="checkbox"
-                        value="high-fees"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-pain-point-high-fees">High fees</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-pain-point-low-interest"
-                        name="fiat-bank-pain-point"
-                        type="checkbox"
-                        value="low-interest"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-pain-point-low-interest">Low interest</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-pain-point-poor-customer-service"
-                        name="fiat-bank-pain-point"
-                        type="checkbox"
-                        value="poor-customer-service"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-pain-point-poor-customer-service"
-                        >Poor customer service</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-pain-point-poor-online-banking"
-                        name="fiat-bank-pain-point"
-                        type="checkbox"
-                        value="poor-online-banking"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-pain-point-poor-online-banking">Poor online banking</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-pain-point-poor-online-security"
-                        name="fiat-bank-pain-point"
-                        type="checkbox"
-                        value="poor-online-security"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-pain-point-poor-online-security"
-                        >Poor online security</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="other-fiat-bank-pain-point"
-                        name="fiat-bank-pain-point"
-                        type="checkbox"
-                        value="other-fiat-bank-pain-point"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="other-fiat-bank-pain-point">Other</label>
-                    </div>
-                  </div>
-                  <div class="fs-field indented-textinput">
-                    <input
-                      class="fs-input"
-                      type="text"
-                      id="other-fiat-bank-pain-point-text"
-                      name="fiat-bank-pain-point"
-                      placeholder="Please specify..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What do you like most about your bank? (check all that apply)</legend>
-                <div class="fs-checkbox-group">
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-enjoy-point-convenience"
-                        name="fiat-bank-enjoy-point"
-                        type="checkbox"
-                        value="convenience"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-enjoy-point-convenience">Convenience</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-enjoy-point-security"
-                        name="fiat-bank-enjoy-point"
-                        type="checkbox"
-                        value="security"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-enjoy-point-security">Security</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-enjoy-point-product-suite"
-                        name="fiat-bank-enjoy-point"
-                        type="checkbox"
-                        value="product-suite"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-enjoy-point-product-suite">Product suite</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="fiat-bank-enjoy-point-interest-rates"
-                        name="fiat-bank-enjoy-point"
-                        type="checkbox"
-                        value="interest-rates"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="fiat-bank-enjoy-point-interest-rates">Interest rates</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="other-fiat-bank-enjoy-point"
-                        name="fiat-bank-enjoy-point"
-                        type="checkbox"
-                        value="other-fiat-bank-enjoy-point"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="other-fiat-bank-enjoy-point">Other</label>
-                    </div>
-                  </div>
-                  <div class="fs-field indented-textinput">
-                    <input
-                      class="fs-input"
-                      type="text"
-                      id="other-fiat-bank-enjoy-point-text"
-                      name="fiat-bank-enjoy-point"
-                      placeholder="Please specify..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">Do you self-custody your cryptocurrency?</legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="do-you-self-custody-yes"
-                        name="do-you-self-custody"
-                        type="radio"
-                        value="yes"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="do-you-self-custody-yes">Yes</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="do-you-self-custody-no"
-                        name="do-you-self-custody"
-                        type="radio"
-                        value="no"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="do-you-self-custody-no">No</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">How important is it to you to custody and control your own wealth?</legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-self-custody-none"
-                        name="importance-of-self-custody"
-                        type="radio"
-                        value="not-important"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-self-custody-none"
-                        >Not important: I don&#x27;t like the idea as I find it too risky with little benefit.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-self-custody-low"
-                        name="importance-of-self-custody"
-                        type="radio"
-                        value="low"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-self-custody-low"
-                        >Probably not: The risks outweigh the benefits.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-self-custody-moderate"
-                        name="importance-of-self-custody"
-                        type="radio"
-                        value="moderate"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-self-custody-moderate"
-                        >Interesting: It is something I would consider but I would want to understand the risks and
-                        benefits.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-self-custody-high"
-                        name="importance-of-self-custody"
-                        type="radio"
-                        value="high"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-self-custody-high"
-                        >Very interested: I see the benefits and will likely self-custody some of my wealth to learn
-                        more.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-self-custody-very-high"
-                        name="importance-of-self-custody"
-                        type="radio"
-                        value="very-high"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-self-custody-very-high"
-                        >Extremely interested: I want to take custody of my wealth as soon as possible.</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  Our product is a crypto debit card that lets you spend your crypto currency by converting it to fiat
-                  at the point of sale for delivery to the merchant. We also offer a tax management solution to optimize
-                  your capital gains tax obligation by specifically identifying your purchase lot that will be sold at
-                  the time of the transaction. We will KYC your account and provide you with a custodial wallet that you
-                  can use to transfer the crypto that you want to spend. Would you be interested in this product?
-                </legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="initial-product-perception-no-interest"
-                        name="initial-product-perception"
-                        type="radio"
-                        value="not-interested"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="initial-product-perception-no-interest"
-                        >Not all interested: I would not want to use this product.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="initial-product-perception-low"
-                        name="initial-product-perception"
-                        type="radio"
-                        value="low"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="initial-product-perception-low"
-                        >Neutral: I am no more interested in this crypto debit card than any other one on the market
-                        today.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="initial-product-perception-moderate"
-                        name="initial-product-perception"
-                        type="radio"
-                        value="moderate"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="initial-product-perception-moderate"
-                        >Interested: I would be open to getting this card and seeing how it works.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="initial-product-perception-high"
-                        name="initial-product-perception"
-                        type="radio"
-                        value="high"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="initial-product-perception-high"
-                        >Very interested: This is the debit card that I&#x27;ve been waiting for.</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What features of this card do you object to? (check all that apply)</legend>
-                <div class="fs-checkbox-group">
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="why-not-3f-card-dont-want-spend-crypto"
-                        name="why-not-3f-card"
-                        type="checkbox"
-                        value="dont-want-spend-crypto"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="why-not-3f-card-dont-want-spend-crypto"
-                        >I do not want to spend my crypto</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="why-not-3f-card-tax-info-3rd-party"
-                        name="why-not-3f-card"
-                        type="checkbox"
-                        value="no-sharing-tax-info-to-3rd-party"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="why-not-3f-card-tax-info-3rd-party"
-                        >I do not want to share my tax information with a 3rd party</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="why-not-3f-card-not-giving-kyc"
-                        name="why-not-3f-card"
-                        type="checkbox"
-                        value="not-giving-kyc"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="why-not-3f-card-not-giving-kyc"
-                        >I don&#x27;t want to give personal information to comply with KYC rules</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="why-not-3f-card-not-transferring-crypto-to-3f"
-                        name="why-not-3f-card"
-                        type="checkbox"
-                        value="not-transferring-crypto-to-3f"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="why-not-3f-card-not-transferring-crypto-to-3f"
-                        >I don&#x27;t want to transfer any of my crypto, even a small amount that I plan to spend, to a
-                        custodial wallet.</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="why-not-3f-card-capital-gains"
-                        name="why-not-3f-card"
-                        type="checkbox"
-                        value="capital-gains"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="why-not-3f-card-capital-gains"
-                        >I don&#x27;t want to worry about capital gains taxes at all when I make general and household
-                        purchases</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="why-not-3f-card-hassle-v-reward"
-                        name="why-not-3f-card"
-                        type="checkbox"
-                        value="hassle-v-reward"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="why-not-3f-card-hassle-v-reward"
-                        >The card is not worth the trouble</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="other-why-not-3f-card"
-                        name="why-not-3f-card"
-                        type="checkbox"
-                        value="other-why-not-3f-card"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="other-why-not-3f-card">Other</label>
-                    </div>
-                  </div>
-                  <div class="fs-field indented-textinput">
-                    <input
-                      class="fs-input"
-                      type="text"
-                      id="other-why-not-3f-card-text"
-                      name="why-not-3f-card"
-                      placeholder="Please specify..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">What features are most interesting to you? (check all that apply)</legend>
-                <div class="fs-checkbox-group">
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="3f-feature-most-interested-spend-crypto-easy"
-                        name="3f-feature-most-interested"
-                        type="checkbox"
-                        value="spend-crypto-easy"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="3f-feature-most-interested-spend-crypto-easy"
-                        >Being able to spend my crypto holdings for goods and services</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="3f-feature-most-interested-not-need-fiat"
-                        name="3f-feature-most-interested"
-                        type="checkbox"
-                        value="not-need-fiat"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="3f-feature-most-interested-not-need-fiat"
-                        >Not needing to hold any fiat currency</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="3f-feature-most-interested-tax-solution"
-                        name="3f-feature-most-interested"
-                        type="checkbox"
-                        value="tax-solution"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="3f-feature-most-interested-tax-solution"
-                        >Being able to manage my capital gains taxes</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="3f-feature-most-interested-self-custody"
-                        name="3f-feature-most-interested"
-                        type="checkbox"
-                        value="self-custody"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="3f-feature-most-interested-self-custody"
-                        >Enabling Self-Custody of my wealth</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="3f-feature-most-interested-inflation-protection"
-                        name="3f-feature-most-interested"
-                        type="checkbox"
-                        value="inflation-protection"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="3f-feature-most-interested-inflation-protection"
-                        >Not losing wealth from inflation</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="3f-feature-most-interested-establish-crypto-as-curency"
-                        name="3f-feature-most-interested"
-                        type="checkbox"
-                        value="establish-crypto-as-curency"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="3f-feature-most-interested-establish-crypto-as-curency"
-                        >Helping establish crypto as a viable currency</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="other-3f-feature-most-interested"
-                        name="3f-feature-most-interested"
-                        type="checkbox"
-                        value="other-3f-feature-most-interested"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="other-3f-feature-most-interested">Other</label>
-                    </div>
-                  </div>
-                  <div class="fs-field indented-textinput">
-                    <input
-                      class="fs-input"
-                      type="text"
-                      id="other-3f-feature-most-interested-text"
-                      name="3f-feature-most-interested"
-                      placeholder="Please specify..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  Which other crypto debit cards do you use, if any? (check all that apply)
-                </legend>
-                <div class="fs-checkbox-group">
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="using-other-crypto-debit-cards-coinbase"
-                        name="using-other-crypto-debit-cards"
-                        type="checkbox"
-                        value="coinbase"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="using-other-crypto-debit-cards-coinbase">Coinbase</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="using-other-crypto-debit-cards-binance"
-                        name="using-other-crypto-debit-cards"
-                        type="checkbox"
-                        value="binance"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="using-other-crypto-debit-cards-binance">Binance</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="using-other-crypto-debit-cards-crypto-dot-com"
-                        name="using-other-crypto-debit-cards"
-                        type="checkbox"
-                        value="crypto-dot-com"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="using-other-crypto-debit-cards-crypto-dot-com">Crypto.com</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="using-other-crypto-debit-cards-venmo"
-                        name="using-other-crypto-debit-cards"
-                        type="checkbox"
-                        value="venmo"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="using-other-crypto-debit-cards-venmo">Venmo</label>
-                    </div>
-                  </div>
-
-                  <div class="fs-checkbox-field">
-                    <div class="fs-checkbox-wrapper">
-                      <input
-                        class="fs-checkbox"
-                        id="other-using-other-crypto-debit-cards"
-                        name="using-other-crypto-debit-cards"
-                        type="checkbox"
-                        value="other-using-other-crypto-debit-cards"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="other-using-other-crypto-debit-cards">Other</label>
-                    </div>
-                  </div>
-                  <div class="fs-field indented-textinput">
-                    <input
-                      class="fs-input"
-                      type="text"
-                      id="other-using-other-crypto-debit-cards-text"
-                      name="using-other-crypto-debit-cards"
-                      placeholder="Please specify..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  How important is a rewards program to you when selecting what debit card to use?
-                </legend>
-                <div class="fs-radio-group">
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-debit-rewards-none"
-                        name="importance-of-debit-rewards"
-                        type="radio"
-                        value="not-important"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-debit-rewards-none"
-                        >Not important: think rewards programs are more trouble than they&#x27;re worth</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-debit-rewards-low"
-                        name="importance-of-debit-rewards"
-                        type="radio"
-                        value="low"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-debit-rewards-low"
-                        >Somewhat important: A rewards program is one of several factors in my choice of debit
-                        cards</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-debit-rewards-moderate"
-                        name="importance-of-debit-rewards"
-                        type="radio"
-                        value="moderate"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-debit-rewards-moderate"
-                        >Very important: I would not use a debit card unless it has a rewards program</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="fs-radio-field">
-                    <div class="fs-radio-wrapper">
-                      <input
-                        class="fs-radio"
-                        id="importance-of-debit-rewards-high"
-                        name="importance-of-debit-rewards"
-                        type="radio"
-                        value="high"
-                      />
-                    </div>
-                    <div>
-                      <label class="fs-label" for="importance-of-debit-rewards-high"
-                        >Most important; I choose a debit card solely based on the most generous rewards program</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">
-                  If you would like to participate in an opportunity for a Client Focus discussion, please indicate your
-                  preferred contact details.
-                </legend>
+            <!-- Additional questions - hidden by default -->
+            <div id="additional-questions" class="hidden-questions">
+              <li class="form-item">
                 <div class="fs-field">
-                  <label class="fs-label" for="contact_method">Preferred method of contact</label>
-                  <select class="fs-select" id="contact_method" name="contact_method">
+                  <legend class="fs-label">
+                    Do you use a credit card or a debit card for your daily spending? (check all that apply)
+                  </legend>
+                  <div class="fs-checkbox-group">
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="daily-credit-card"
+                          name="daily-card-spending"
+                          type="checkbox"
+                          value="daily-credit-card"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="daily-credit-card">Credit Card</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="daily-debit-card"
+                          name="daily-card-spending"
+                          type="checkbox"
+                          value="daily-debit-card"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="daily-debit-card">Debit Card</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    What payment method do you use for your monthly spending? (check all that apply)
+                  </legend>
+                  <div class="fs-checkbox-group">
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="monthly-spending-credit-card"
+                          name="monthly-spending"
+                          type="checkbox"
+                          value="monthly-spending-credit-card"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-spending-credit-card">Credit Card</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="monthly-spending-debit-card"
+                          name="monthly-spending"
+                          type="checkbox"
+                          value="monthly-spending-debit-card"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-spending-debit-card">Debit Card</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="monthly-spending-bill-pay"
+                          name="monthly-spending"
+                          type="checkbox"
+                          value="monthly-spending-bill-pay"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-spending-bill-pay">Bill Pay</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="monthly-spending-cash"
+                          name="monthly-spending"
+                          type="checkbox"
+                          value="monthly-spending-cash"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-spending-cash">Cash</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="other-monthly-spending"
+                          name="monthly-spending"
+                          type="checkbox"
+                          value="other-monthly-spending"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="other-monthly-spending">Other</label>
+                      </div>
+                    </div>
+                    <div class="fs-field indented-textinput">
+                      <input
+                        class="fs-input"
+                        type="text"
+                        id="other-monthly-spending-text"
+                        name="monthly-spending"
+                        placeholder="Please specify..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">Do you use a mobile app for payment?</legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="do-you-pay-with-moblie-app-yes"
+                          name="do-you-pay-with-moblie-app"
+                          type="radio"
+                          value="yes"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="do-you-pay-with-moblie-app-yes">Yes</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="do-you-pay-with-moblie-app-no"
+                          name="do-you-pay-with-moblie-app"
+                          type="radio"
+                          value="no"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="do-you-pay-with-moblie-app-no">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    How many times a day do you use your debit, credit card, or mobile app to make a purchase?
+                  </legend>
+                  <select
+                    class="fs-select indented-textinput"
+                    id="number-of-daily-use-credit-debit-mobilepay"
+                    name="number-of-daily-use-credit-debit-mobilepay"
+                  >
                     <option value="" disabled selected></option>
-                    <option value="email">Email</option>
-                    <option value="phone">Phone</option>
-                    <option value="whatsapp">Whatsapp</option>
-                    <option value="signal">Signal</option>
-                    <option value="telegram">Telegram</option>
+                    <option value="1-per-day">1 time a day</option>
+                    <option value="2-5-per-day">2-5 times a day</option>
+                    <option value="5-10-per-day">5-10 times a day</option>
+                    <option value=">11-per-day">11+ times a day</option>
                   </select>
                 </div>
-                <div class="fs-field textinput">
-                  <input
-                    class="fs-input"
-                    type="text"
-                    id="contact_method_text"
-                    name="contact_method_text"
-                    placeholder="Please specify your contact details..."
-                  />
-                </div>
-              </div>
-            </li>
+              </li>
 
-            <li class="form-item">
-              <div class="fs-field">
-                <legend class="fs-label">Additional Comments or Suggestions</legend>
-                <div class="fs-field textarea">
-                  <textarea
-                    class="fs-textarea"
-                    id="additional-comments"
-                    name="additional-comments"
-                    placeholder="Share anything else you&#x27;d like us to know"
-                  ></textarea>
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">Where do you live?</legend>
+                  <select
+                    class="fs-select indented-textinput"
+                    id="country-residence"
+                    name="country-residence"
+                    onchange="updateStates()"
+                  >
+                    <option value="">Please select your country</option>
+                    <option value="United States of America">United States of America</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cabo Verde">Cabo Verde</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the</option>
+                    <option value="Congo, Republic of the">Congo, Republic of the</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czechia">Czechia</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Eswatini">Eswatini</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iran">Iran</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Kosovo">Kosovo</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Micronesia">Micronesia</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="North Macedonia">North Macedonia</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Palestine">Palestine</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option value="Saint Lucia">Saint Lucia</option>
+                    <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="South Sudan">South Sudan</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Timor-Leste">Timor-Leste</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Vatican City (Holy See)">Vatican City (Holy See)</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
-              </div>
-            </li>
+
+                <br />
+                <div class="fs-field">
+                  <select class="fs-select indented-textinput" id="state-residence" name="state-residence">
+                    <option value="">First select your country</option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What is your profession? (Choose your closest group)</legend>
+                  <select class="fs-select indented-textinput" id="profession" name="profession">
+                    <option value="" disabled selected></option>
+                    <option value="Architecture and Engineering Occupations">
+                      Architecture and Engineering Occupations
+                    </option>
+                    <option value="Arts, Design, Entertainment, Sports, and Media Occupations">
+                      Arts, Design, Entertainment, Sports, and Media Occupations
+                    </option>
+                    <option value="Building and Grounds Cleaning and Maintenance Occupations">
+                      Building and Grounds Cleaning and Maintenance Occupations
+                    </option>
+                    <option value="Business and Financial Operations Occupations">
+                      Business and Financial Operations Occupations
+                    </option>
+                    <option value="Community and Social Service Occupations">
+                      Community and Social Service Occupations
+                    </option>
+                    <option value="Computer and Mathematical Occupations">Computer and Mathematical Occupations</option>
+                    <option value="Construction and Extraction Occupations">
+                      Construction and Extraction Occupations
+                    </option>
+                    <option value="Educational Instruction and Library Occupations">
+                      Educational Instruction and Library Occupations
+                    </option>
+                    <option value="Farming, Fishing, and Forestry Occupations">
+                      Farming, Fishing, and Forestry Occupations
+                    </option>
+                    <option value="Food Preparation and Serving Related Occupations">
+                      Food Preparation and Serving Related Occupations
+                    </option>
+                    <option value="Healthcare Practitioners and Technical Occupations">
+                      Healthcare Practitioners and Technical Occupations
+                    </option>
+                    <option value="Healthcare Support Occupations">Healthcare Support Occupations</option>
+                    <option value="Installation, Maintenance, and Repair Occupations">
+                      Installation, Maintenance, and Repair Occupations
+                    </option>
+                    <option value="Legal Occupations">Legal Occupations</option>
+                    <option value="Life, Physical, and Social Science Occupations">
+                      Life, Physical, and Social Science Occupations
+                    </option>
+                    <option value="Management Occupations">Management Occupations</option>
+                    <option value="Military Specific Occupations">Military Specific Occupations</option>
+                    <option value="Office and Administrative Support Occupations">
+                      Office and Administrative Support Occupations
+                    </option>
+                    <option value="Personal Care and Service Occupations">Personal Care and Service Occupations</option>
+                    <option value="Production Occupations">Production Occupations</option>
+                    <option value="Protective Service Occupations">Protective Service Occupations</option>
+                    <option value="Sales and Related Occupations">Sales and Related Occupations</option>
+                    <option value="Transportation and Material Moving Occupations">
+                      Transportation and Material Moving Occupations
+                    </option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What is your income?</legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="income-level-under-50k"
+                          name="income-level"
+                          type="radio"
+                          value="under 50k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="income-level-under-50k">Less than $50k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="income-level-50-to-100k"
+                          name="income-level"
+                          type="radio"
+                          value="50-100k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="income-level-50-to-100k">$50k up to $100k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="income-level-100-to-200k"
+                          name="income-level"
+                          type="radio"
+                          value="100-200k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="income-level-100-to-200k">$100k up to $200k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="income-level-200-to-250k"
+                          name="income-level"
+                          type="radio"
+                          value="200-250k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="income-level-200-to-250k">$200k up to $250k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="income-level-250-to-600k"
+                          name="income-level"
+                          type="radio"
+                          value="250-600k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="income-level-250-to-600k">$250k up to $600k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="income-level-over-600k"
+                          name="income-level"
+                          type="radio"
+                          value="over 600k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="income-level-over-600k">Over $600k</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What percentage of your income is earned in crypto currency?</legend>
+                  <select
+                    class="fs-select indented-textinput"
+                    id="percentage-of-income-in-crypto"
+                    name="percentage-of-income-in-crypto"
+                  >
+                    <option value="" disabled selected></option>
+                    <option value="0">0%</option>
+                    <option value="1-to-10">1-10%</option>
+                    <option value="11-to-20">11-20%</option>
+                    <option value="21-to-50">21-50%</option>
+                    <option value="51-to-80">51-80%</option>
+                    <option value="81-to-99">81-99%</option>
+                    <option value="100">100%</option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What is your liquid net worth? [approximate USD equivalent]</legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="liquid-net-worth-under-100k"
+                          name="liquid-net-worth"
+                          type="radio"
+                          value="under 100k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="liquid-net-worth-under-100k">Less than $100k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="liquid-net-worth-100-to-250k"
+                          name="liquid-net-worth"
+                          type="radio"
+                          value="100-250k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="liquid-net-worth-100-to-250k">$100k up to $250k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="liquid-net-worth-250-to-500k"
+                          name="liquid-net-worth"
+                          type="radio"
+                          value="250-500k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="liquid-net-worth-250-to-500k">$250k up to $500k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="liquid-net-worth-500-to-1mm"
+                          name="liquid-net-worth"
+                          type="radio"
+                          value="500-1mm"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="liquid-net-worth-500-to-1mm">$500k up to $1mm</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="liquid-net-worth-1-to-5mm"
+                          name="liquid-net-worth"
+                          type="radio"
+                          value="1-5mm"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="liquid-net-worth-1-to-5mm">$1mm up to $5mm</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="liquid-net-worth-5-to-30mm"
+                          name="liquid-net-worth"
+                          type="radio"
+                          value="5-30mm"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="liquid-net-worth-5-to-30mm">$5mm up to $30mm</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="liquid-net-worth-over-30mm"
+                          name="liquid-net-worth"
+                          type="radio"
+                          value="over 30mm"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="liquid-net-worth-over-30mm">Over $30mm</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What percentage of your liquid net worth is in crypto currency?</legend>
+                  <select
+                    class="fs-select indented-textinput"
+                    id="liquid-net-worth-in-crypto"
+                    name="liquid-net-worth-in-crypto"
+                  >
+                    <option value="" disabled selected></option>
+                    <option value="0">0%</option>
+                    <option value="1-to-10">1-10%</option>
+                    <option value="11-to-20">11-20%</option>
+                    <option value="21-to-50">21-50%</option>
+                    <option value="51-to-80">51-80%</option>
+                    <option value="81-to-99">81-99%</option>
+                    <option value="100">100%</option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    What is your average monthly budget for general & household expenses? [approximate USD equivalent]
+                  </legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="monthly-budget-household-general-under-5k"
+                          name="monthly-budget-household-general"
+                          type="radio"
+                          value="under 5k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-budget-household-general-under-5k">Less than $5k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="monthly-budget-household-general-5-to-10k"
+                          name="monthly-budget-household-general"
+                          type="radio"
+                          value="5-10k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-budget-household-general-5-to-10k">$5k up to $10k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="monthly-budget-household-general-10-to-20k"
+                          name="monthly-budget-household-general"
+                          type="radio"
+                          value="10-20k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-budget-household-general-10-to-20k">$10k up to $20k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="monthly-budget-household-general-20-to-50k"
+                          name="monthly-budget-household-general"
+                          type="radio"
+                          value="20-50k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-budget-household-general-20-to-50k">$20k up to $50k</label>
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="monthly-budget-household-general-over-50k"
+                          name="monthly-budget-household-general"
+                          type="radio"
+                          value="over 50k"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="monthly-budget-household-general-over-50k">Over $50k</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">On a scale of 1 to 10, how concerned are you about inflation?</legend>
+                  <select
+                    class="fs-select indented-textinput"
+                    id="inflation-concern-level"
+                    name="inflation-concern-level"
+                  >
+                    <option value="" disabled selected></option>
+                    <option value="10">10 - extremely concerned</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7 - cautiously concerned</option>
+                    <option value="6">6</option>
+                    <option value="5">5 - moderately concerned</option>
+                    <option value="4">4</option>
+                    <option value="3">3 - mildly concerned</option>
+                    <option value="2">2</option>
+                    <option value="1">1 - not concerned</option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    How much do you consider capital gains taxes when selling an investment?
+                  </legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="capital-gains-concerns-none"
+                          name="capital-gains-concerns"
+                          type="radio"
+                          value="yes"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="capital-gains-concerns-none"
+                          >Not at all, they do not affect my decision to sell my investments</label
+                        >
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="capital-gains-concerns-sometimes"
+                          name="capital-gains-concerns"
+                          type="radio"
+                          value="no"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="capital-gains-concerns-sometimes"
+                          >Somewhat important, they are one of several factors I use to decide when to sell an
+                          investment</label
+                        >
+                      </div>
+                    </div>
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="capital-gains-concerns-always"
+                          name="capital-gains-concerns"
+                          type="radio"
+                          value="no"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="capital-gains-concerns-always"
+                          >Very important, my capital gains status is a major factor in when I sell an investment</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    On a scale of 1-10, what is your perception of the usefulness of cryptocurrency?
+                  </legend>
+                  <select
+                    class="fs-select indented-textinput"
+                    id="crypto-usefulness-level"
+                    name="crypto-usefulness-level"
+                  >
+                    <option value="" disabled selected></option>
+                    <option value="10">10 - extremely useful</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7 - very useful</option>
+                    <option value="6">6</option>
+                    <option value="5">5 - moderately useful</option>
+                    <option value="4">4</option>
+                    <option value="3">3 - mildly useful</option>
+                    <option value="2">2</option>
+                    <option value="1">1 - not useful</option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">How many banks do you use to custody your fiat money?</legend>
+                  <select class="fs-select indented-textinput" id="number-fiat-banks" name="number-fiat-banks">
+                    <option value="" disabled selected></option>
+                    <option value="1-bank">1 bank</option>
+                    <option value="2-5-banks">2-5 banks</option>
+                    <option value="5-10-banks">5-10 banks</option>
+                    <option value=">11-banks">11+ banks</option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">On a scale of 1-10, how satisfied are you with your favorite bank?</legend>
+                  <select
+                    class="fs-select indented-textinput"
+                    id="satisfaction-of-favorite-fiat-bank"
+                    name="satisfaction-of-favorite-fiat-bank"
+                  >
+                    <option value="" disabled selected></option>
+                    <option value="10">10 - extremely satisfied</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7 - cautiously satisfied</option>
+                    <option value="6">6</option>
+                    <option value="5">5 - moderately satisfied</option>
+                    <option value="4">4</option>
+                    <option value="3">3 - mildly satisfied</option>
+                    <option value="2">2</option>
+                    <option value="1">1 - not satisfied</option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    What is your biggest issue or problem with your bank? (check all that apply)
+                  </legend>
+                  <div class="fs-checkbox-group">
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-pain-point-high-fees"
+                          name="fiat-bank-pain-point"
+                          type="checkbox"
+                          value="high-fees"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-pain-point-high-fees">High fees</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-pain-point-low-interest"
+                          name="fiat-bank-pain-point"
+                          type="checkbox"
+                          value="low-interest"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-pain-point-low-interest">Low interest</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-pain-point-poor-customer-service"
+                          name="fiat-bank-pain-point"
+                          type="checkbox"
+                          value="poor-customer-service"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-pain-point-poor-customer-service"
+                          >Poor customer service</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-pain-point-poor-online-banking"
+                          name="fiat-bank-pain-point"
+                          type="checkbox"
+                          value="poor-online-banking"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-pain-point-poor-online-banking"
+                          >Poor online banking</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-pain-point-poor-online-security"
+                          name="fiat-bank-pain-point"
+                          type="checkbox"
+                          value="poor-online-security"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-pain-point-poor-online-security"
+                          >Poor online security</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="other-fiat-bank-pain-point"
+                          name="fiat-bank-pain-point"
+                          type="checkbox"
+                          value="other-fiat-bank-pain-point"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="other-fiat-bank-pain-point">Other</label>
+                      </div>
+                    </div>
+                    <div class="fs-field indented-textinput">
+                      <input
+                        class="fs-input"
+                        type="text"
+                        id="other-fiat-bank-pain-point-text"
+                        name="fiat-bank-pain-point"
+                        placeholder="Please specify..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What do you like most about your bank? (check all that apply)</legend>
+                  <div class="fs-checkbox-group">
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-enjoy-point-convenience"
+                          name="fiat-bank-enjoy-point"
+                          type="checkbox"
+                          value="convenience"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-enjoy-point-convenience">Convenience</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-enjoy-point-security"
+                          name="fiat-bank-enjoy-point"
+                          type="checkbox"
+                          value="security"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-enjoy-point-security">Security</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-enjoy-point-product-suite"
+                          name="fiat-bank-enjoy-point"
+                          type="checkbox"
+                          value="product-suite"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-enjoy-point-product-suite">Product suite</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="fiat-bank-enjoy-point-interest-rates"
+                          name="fiat-bank-enjoy-point"
+                          type="checkbox"
+                          value="interest-rates"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="fiat-bank-enjoy-point-interest-rates">Interest rates</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="other-fiat-bank-enjoy-point"
+                          name="fiat-bank-enjoy-point"
+                          type="checkbox"
+                          value="other-fiat-bank-enjoy-point"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="other-fiat-bank-enjoy-point">Other</label>
+                      </div>
+                    </div>
+                    <div class="fs-field indented-textinput">
+                      <input
+                        class="fs-input"
+                        type="text"
+                        id="other-fiat-bank-enjoy-point-text"
+                        name="fiat-bank-enjoy-point"
+                        placeholder="Please specify..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">Do you self-custody your cryptocurrency?</legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="do-you-self-custody-yes"
+                          name="do-you-self-custody"
+                          type="radio"
+                          value="yes"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="do-you-self-custody-yes">Yes</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="do-you-self-custody-no"
+                          name="do-you-self-custody"
+                          type="radio"
+                          value="no"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="do-you-self-custody-no">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">How important is it to you to custody and control your own wealth?</legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-self-custody-none"
+                          name="importance-of-self-custody"
+                          type="radio"
+                          value="not-important"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-self-custody-none"
+                          >Not important: I don&#x27;t like the idea as I find it too risky with little benefit.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-self-custody-low"
+                          name="importance-of-self-custody"
+                          type="radio"
+                          value="low"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-self-custody-low"
+                          >Probably not: The risks outweigh the benefits.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-self-custody-moderate"
+                          name="importance-of-self-custody"
+                          type="radio"
+                          value="moderate"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-self-custody-moderate"
+                          >Interesting: It is something I would consider but I would want to understand the risks and
+                          benefits.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-self-custody-high"
+                          name="importance-of-self-custody"
+                          type="radio"
+                          value="high"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-self-custody-high"
+                          >Very interested: I see the benefits and will likely self-custody some of my wealth to learn
+                          more.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-self-custody-very-high"
+                          name="importance-of-self-custody"
+                          type="radio"
+                          value="very-high"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-self-custody-very-high"
+                          >Extremely interested: I want to take custody of my wealth as soon as possible.</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    Our product is a crypto debit card that lets you spend your crypto currency by converting it to fiat
+                    at the point of sale for delivery to the merchant. We also offer a tax management solution to
+                    optimize your capital gains tax obligation by specifically identifying your purchase lot that will
+                    be sold at the time of the transaction. We will KYC your account and provide you with a custodial
+                    wallet that you can use to transfer the crypto that you want to spend. Would you be interested in
+                    this product?
+                  </legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="initial-product-perception-no-interest"
+                          name="initial-product-perception"
+                          type="radio"
+                          value="not-interested"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="initial-product-perception-no-interest"
+                          >Not all interested: I would not want to use this product.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="initial-product-perception-low"
+                          name="initial-product-perception"
+                          type="radio"
+                          value="low"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="initial-product-perception-low"
+                          >Neutral: I am no more interested in this crypto debit card than any other one on the market
+                          today.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="initial-product-perception-moderate"
+                          name="initial-product-perception"
+                          type="radio"
+                          value="moderate"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="initial-product-perception-moderate"
+                          >Interested: I would be open to getting this card and seeing how it works.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="initial-product-perception-high"
+                          name="initial-product-perception"
+                          type="radio"
+                          value="high"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="initial-product-perception-high"
+                          >Very interested: This is the debit card that I&#x27;ve been waiting for.</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What features of this card do you object to? (check all that apply)</legend>
+                  <div class="fs-checkbox-group">
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="why-not-3f-card-dont-want-spend-crypto"
+                          name="why-not-3f-card"
+                          type="checkbox"
+                          value="dont-want-spend-crypto"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="why-not-3f-card-dont-want-spend-crypto"
+                          >I do not want to spend my crypto</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="why-not-3f-card-tax-info-3rd-party"
+                          name="why-not-3f-card"
+                          type="checkbox"
+                          value="no-sharing-tax-info-to-3rd-party"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="why-not-3f-card-tax-info-3rd-party"
+                          >I do not want to share my tax information with a 3rd party</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="why-not-3f-card-not-giving-kyc"
+                          name="why-not-3f-card"
+                          type="checkbox"
+                          value="not-giving-kyc"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="why-not-3f-card-not-giving-kyc"
+                          >I don&#x27;t want to give personal information to comply with KYC rules</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="why-not-3f-card-not-transferring-crypto-to-3f"
+                          name="why-not-3f-card"
+                          type="checkbox"
+                          value="not-transferring-crypto-to-3f"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="why-not-3f-card-not-transferring-crypto-to-3f"
+                          >I don&#x27;t want to transfer any of my crypto, even a small amount that I plan to spend, to
+                          a custodial wallet.</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="why-not-3f-card-capital-gains"
+                          name="why-not-3f-card"
+                          type="checkbox"
+                          value="capital-gains"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="why-not-3f-card-capital-gains"
+                          >I don&#x27;t want to worry about capital gains taxes at all when I make general and household
+                          purchases</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="why-not-3f-card-hassle-v-reward"
+                          name="why-not-3f-card"
+                          type="checkbox"
+                          value="hassle-v-reward"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="why-not-3f-card-hassle-v-reward"
+                          >The card is not worth the trouble</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="other-why-not-3f-card"
+                          name="why-not-3f-card"
+                          type="checkbox"
+                          value="other-why-not-3f-card"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="other-why-not-3f-card">Other</label>
+                      </div>
+                    </div>
+                    <div class="fs-field indented-textinput">
+                      <input
+                        class="fs-input"
+                        type="text"
+                        id="other-why-not-3f-card-text"
+                        name="why-not-3f-card"
+                        placeholder="Please specify..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">What features are most interesting to you? (check all that apply)</legend>
+                  <div class="fs-checkbox-group">
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="3f-feature-most-interested-spend-crypto-easy"
+                          name="3f-feature-most-interested"
+                          type="checkbox"
+                          value="spend-crypto-easy"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="3f-feature-most-interested-spend-crypto-easy"
+                          >Being able to spend my crypto holdings for goods and services</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="3f-feature-most-interested-not-need-fiat"
+                          name="3f-feature-most-interested"
+                          type="checkbox"
+                          value="not-need-fiat"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="3f-feature-most-interested-not-need-fiat"
+                          >Not needing to hold any fiat currency</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="3f-feature-most-interested-tax-solution"
+                          name="3f-feature-most-interested"
+                          type="checkbox"
+                          value="tax-solution"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="3f-feature-most-interested-tax-solution"
+                          >Being able to manage my capital gains taxes</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="3f-feature-most-interested-self-custody"
+                          name="3f-feature-most-interested"
+                          type="checkbox"
+                          value="self-custody"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="3f-feature-most-interested-self-custody"
+                          >Enabling Self-Custody of my wealth</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="3f-feature-most-interested-inflation-protection"
+                          name="3f-feature-most-interested"
+                          type="checkbox"
+                          value="inflation-protection"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="3f-feature-most-interested-inflation-protection"
+                          >Not losing wealth from inflation</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="3f-feature-most-interested-establish-crypto-as-curency"
+                          name="3f-feature-most-interested"
+                          type="checkbox"
+                          value="establish-crypto-as-curency"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="3f-feature-most-interested-establish-crypto-as-curency"
+                          >Helping establish crypto as a viable currency</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="other-3f-feature-most-interested"
+                          name="3f-feature-most-interested"
+                          type="checkbox"
+                          value="other-3f-feature-most-interested"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="other-3f-feature-most-interested">Other</label>
+                      </div>
+                    </div>
+                    <div class="fs-field indented-textinput">
+                      <input
+                        class="fs-input"
+                        type="text"
+                        id="other-3f-feature-most-interested-text"
+                        name="3f-feature-most-interested"
+                        placeholder="Please specify..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    Which other crypto debit cards do you use, if any? (check all that apply)
+                  </legend>
+                  <div class="fs-checkbox-group">
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="using-other-crypto-debit-cards-coinbase"
+                          name="using-other-crypto-debit-cards"
+                          type="checkbox"
+                          value="coinbase"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="using-other-crypto-debit-cards-coinbase">Coinbase</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="using-other-crypto-debit-cards-binance"
+                          name="using-other-crypto-debit-cards"
+                          type="checkbox"
+                          value="binance"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="using-other-crypto-debit-cards-binance">Binance</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="using-other-crypto-debit-cards-crypto-dot-com"
+                          name="using-other-crypto-debit-cards"
+                          type="checkbox"
+                          value="crypto-dot-com"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="using-other-crypto-debit-cards-crypto-dot-com">Crypto.com</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="using-other-crypto-debit-cards-venmo"
+                          name="using-other-crypto-debit-cards"
+                          type="checkbox"
+                          value="venmo"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="using-other-crypto-debit-cards-venmo">Venmo</label>
+                      </div>
+                    </div>
+
+                    <div class="fs-checkbox-field">
+                      <div class="fs-checkbox-wrapper">
+                        <input
+                          class="fs-checkbox"
+                          id="other-using-other-crypto-debit-cards"
+                          name="using-other-crypto-debit-cards"
+                          type="checkbox"
+                          value="other-using-other-crypto-debit-cards"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="other-using-other-crypto-debit-cards">Other</label>
+                      </div>
+                    </div>
+                    <div class="fs-field indented-textinput">
+                      <input
+                        class="fs-input"
+                        type="text"
+                        id="other-using-other-crypto-debit-cards-text"
+                        name="using-other-crypto-debit-cards"
+                        placeholder="Please specify..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    How important is a rewards program to you when selecting what debit card to use?
+                  </legend>
+                  <div class="fs-radio-group">
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-debit-rewards-none"
+                          name="importance-of-debit-rewards"
+                          type="radio"
+                          value="not-important"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-debit-rewards-none"
+                          >Not important: think rewards programs are more trouble than they&#x27;re worth</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-debit-rewards-low"
+                          name="importance-of-debit-rewards"
+                          type="radio"
+                          value="low"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-debit-rewards-low"
+                          >Somewhat important: A rewards program is one of several factors in my choice of debit
+                          cards</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-debit-rewards-moderate"
+                          name="importance-of-debit-rewards"
+                          type="radio"
+                          value="moderate"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-debit-rewards-moderate"
+                          >Very important: I would not use a debit card unless it has a rewards program</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="fs-radio-field">
+                      <div class="fs-radio-wrapper">
+                        <input
+                          class="fs-radio"
+                          id="importance-of-debit-rewards-high"
+                          name="importance-of-debit-rewards"
+                          type="radio"
+                          value="high"
+                        />
+                      </div>
+                      <div>
+                        <label class="fs-label" for="importance-of-debit-rewards-high"
+                          >Most important; I choose a debit card solely based on the most generous rewards
+                          program</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">
+                    If you would like to participate in an opportunity for a Client Focus discussion, please indicate
+                    your preferred contact details.
+                  </legend>
+                  <div class="fs-field">
+                    <label class="fs-label" for="contact_method">Preferred method of contact</label>
+                    <select class="fs-select" id="contact_method" name="contact_method">
+                      <option value="" disabled selected></option>
+                      <option value="email">Email</option>
+                      <option value="phone">Phone</option>
+                      <option value="whatsapp">Whatsapp</option>
+                      <option value="signal">Signal</option>
+                      <option value="telegram">Telegram</option>
+                    </select>
+                  </div>
+                  <div class="fs-field textinput">
+                    <input
+                      class="fs-input"
+                      type="text"
+                      id="contact_method_text"
+                      name="contact_method_text"
+                      placeholder="Please specify your contact details..."
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="form-item">
+                <div class="fs-field">
+                  <legend class="fs-label">Additional Comments or Suggestions</legend>
+                  <div class="fs-field textarea">
+                    <textarea
+                      class="fs-textarea"
+                      id="additional-comments"
+                      name="additional-comments"
+                      placeholder="Share anything else you&#x27;d like us to know"
+                    ></textarea>
+                  </div>
+                </div>
+              </li>
+            </div>
 
             <div class="fs-button-group">
               <button class="fs-button" type="submit">Submit</button>
@@ -2595,6 +2604,33 @@
 
       // Initialize state dropdown as disabled
       document.getElementById('state-residence').disabled = true;
+    </script>
+
+    <script>
+      function handlePurchaseInterest() {
+        const yesRadio = document.getElementById('wants-to-make-purchases-with-yes');
+        const noRadio = document.getElementById('wants-to-make-purchases-with-no');
+        const additionalQuestions = document.getElementById('additional-questions');
+
+        if (yesRadio && yesRadio.checked) {
+          // Show additional questions with animation
+          additionalQuestions.style.display = 'block';
+          additionalQuestions.classList.add('fade-in');
+        } else if (noRadio && noRadio.checked) {
+          // Hide additional questions
+          additionalQuestions.style.display = 'none';
+          additionalQuestions.classList.remove('fade-in');
+        }
+      }
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', function () {
+        // Ensure additional questions are hidden initially
+        const additionalQuestions = document.getElementById('additional-questions');
+        if (additionalQuestions) {
+          additionalQuestions.style.display = 'none';
+        }
+      });
     </script>
 
     <!-- LOCAL Bootstrap JS (includes Popper) -->
