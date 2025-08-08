@@ -26,10 +26,9 @@
           Freedom Card.
         </p>
         <form action="https://formspree.io/f/xjkglqpv" class="fs-form fs-layout__2-column" target="_top" method="POST">
-          
           <!-- Anti-spam honeypot field -->
-          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
-          <input type="text" name="nowayyoucananswerthis" class="honeypot" tabindex="-1" autocomplete="off">
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+          <input type="text" name="nowayyoucananswerthis" class="honeypot" tabindex="-1" autocomplete="off" />
 
           <fieldset>
             <div class="fs-field">
@@ -240,6 +239,25 @@
         <p class="copyright">Copyright 3F Payments Inc. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      // Ensure forms are always reset when navigating to/back/refreshing
+      document.addEventListener('DOMContentLoaded', function () {
+        // Force reset all forms on page load
+        setTimeout(() => {
+          for (const form of document.getElementsByTagName('form')) {
+            form.reset();
+          }
+        }, 0);
+      });
+
+      // Also reset before leaving (your original solution)
+      window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName('form')) {
+          form.reset();
+        }
+      };
+    </script>
 
     <!-- LOCAL Bootstrap JS (includes Popper) -->
     <script src="js/bootstrap.bundle.min.js"></script>
