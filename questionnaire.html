@@ -2633,6 +2633,25 @@
       });
     </script>
 
+    <script>
+      // Ensure forms are always reset when navigating to/back/refreshing
+      document.addEventListener('DOMContentLoaded', function () {
+        // Force reset all forms on page load
+        setTimeout(() => {
+          for (const form of document.getElementsByTagName('form')) {
+            form.reset();
+          }
+        }, 0);
+      });
+
+      // Also reset before leaving (your original solution)
+      window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName('form')) {
+          form.reset();
+        }
+      };
+    </script>
+
     <!-- LOCAL Bootstrap JS (includes Popper) -->
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
