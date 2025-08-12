@@ -65,6 +65,8 @@ textarea {
 .fs-form {
   display: grid;
   row-gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-form:where(.fs-layout__2-column) {
@@ -75,10 +77,17 @@ textarea {
 fieldset {
   display: grid;
   row-gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .base-list li.form-item {
   margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-form:where(.fs-layout__2-column) fieldset {
@@ -91,17 +100,44 @@ fieldset {
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-field .indented-textinput {
-  margin-left: 1.75rem;
+  margin-left: 0;
+  padding-left: 1.75rem;
+  width: 100%;
+  max-width: 100%;
 }
+
+.fs-select .indented-textinput {
+  margin-left: 0;
+  padding-left: 1.75rem;
+  width: 100%;
+}
+
 .fs-label {
   color: var(--color-text-default);
   display: block;
   font-family: var(--font-family-display);
   font-size: 1rem;
   line-height: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Fix legend elements specifically */
+legend.fs-label {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .fs-description {
@@ -109,12 +145,17 @@ fieldset {
   display: block;
   font-size: 1rem;
   line-height: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .fs-button-group {
   display: flex;
   flex-direction: row-reverse;
   column-gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-form:where(.fs-layout__2-column) .fs-button-group {
@@ -158,6 +199,8 @@ fieldset {
   outline: none;
   padding-left: 1rem;
   padding-right: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-input:focus-visible,
@@ -174,12 +217,16 @@ fieldset {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-checkbox-field,
 .fs-radio-field {
   column-gap: 0.5rem;
   display: flex;
+  width: 100%;
+  max-width: 100%;
 }
 
 :is(.fs-checkbox-field, .fs-radio-field) .fs-label + .fs-description {
@@ -191,6 +238,7 @@ fieldset {
   align-items: center;
   display: flex;
   height: 1.25rem;
+  flex-shrink: 0;
 }
 
 .fs-checkbox,
@@ -199,6 +247,7 @@ fieldset {
   border: 1px solid var(--color-border-default);
   height: 1.25rem;
   width: 1.25rem;
+  flex-shrink: 0;
 }
 
 .fs-checkbox {
@@ -252,6 +301,7 @@ fieldset {
   cursor: pointer;
   height: 1.25rem;
   width: 100%;
+  max-width: 100%;
 }
 
 .fs-slider::-moz-range-track {
@@ -300,6 +350,8 @@ fieldset {
   column-gap: 0.75rem;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-switch {
@@ -314,6 +366,7 @@ fieldset {
   transition-property: background-color, background-position;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   width: 2.5rem;
+  flex-shrink: 0;
 }
 
 .fs-switch:checked {
@@ -337,6 +390,8 @@ fieldset {
   outline: none;
   padding: 0.5rem 0.75rem;
   resize: vertical;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fs-textarea:focus-visible {

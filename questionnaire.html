@@ -2601,22 +2601,26 @@
         const additionalQuestions = document.getElementById('additional-questions');
 
         if (yesRadio && yesRadio.checked) {
-          // Show additional questions with animation
-          additionalQuestions.style.display = 'block';
+          // Use visibility and height instead of display
+          additionalQuestions.style.visibility = 'visible';
+          additionalQuestions.style.height = 'auto';
+          additionalQuestions.style.overflow = 'visible';
           additionalQuestions.classList.add('fade-in');
         } else if (noRadio && noRadio.checked) {
-          // Hide additional questions
-          additionalQuestions.style.display = 'none';
+          additionalQuestions.style.visibility = 'hidden';
+          additionalQuestions.style.height = '0';
+          additionalQuestions.style.overflow = 'hidden';
           additionalQuestions.classList.remove('fade-in');
         }
       }
 
-      // Initialize on page load
+      // Initialize with visibility hidden
       document.addEventListener('DOMContentLoaded', function () {
-        // Ensure additional questions are hidden initially
         const additionalQuestions = document.getElementById('additional-questions');
         if (additionalQuestions) {
-          additionalQuestions.style.display = 'none';
+          additionalQuestions.style.visibility = 'hidden';
+          additionalQuestions.style.height = '0';
+          additionalQuestions.style.overflow = 'hidden';
         }
       });
     </script>
