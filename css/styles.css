@@ -66,6 +66,16 @@ h2 {
     text-align: center;
 }
 
+.email-svg {
+    color: #007bff;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.email-svg:hover {
+    color: #0056b3;
+}
+
 /* Base class for shared traits */
 .base-list {
     margin: 1.5rem 0;
